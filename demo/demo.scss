@@ -1,0 +1,21 @@
+.page_title{
+	text-align: center;
+	padding:30px 0;
+	font-size: 32px;
+	color:#F6920F;
+}
+
+.content{
+	padding:10px;
+}
+
+
+.jinui_row{
+	margin-bottom: 10px;
+}
+[class*="jinui_col_"] {
+    border: 1px solid #ccc;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
