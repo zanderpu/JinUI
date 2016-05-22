@@ -1,0 +1,291 @@
+/** 
+* JinUI V0.0.1 
+* By Puter
+* https://zanderpu.github.com/JinUI
+ */
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  line-height: 1.6;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+a img {
+  border: 0; }
+
+a {
+  text-decoration: none; }
+
+.jinui_article {
+  padding: 20px 15px;
+  font-size: 15px; }
+  .jinui_article section {
+    margin-bottom: 1.5em; }
+  .jinui_article h1 {
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: .75em; }
+  .jinui_article h2 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: .3em; }
+  .jinui_article h3 {
+    font-weight: 400;
+    font-size: 15px; }
+
+.jinui_btn {
+  position: relative;
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: #454545;
+  border-radius: 5px;
+  padding: 1px 14px;
+  background: #F7F7F7;
+  box-sizing: border-box;
+  line-height: 2.33333;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden; }
+  .jinui_btn + .jinui_btn {
+    margin-top: 15px; }
+  .jinui_btn:after {
+    content: " ";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #D9D9D9;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    box-sizing: border-box;
+    border-radius: 10px; }
+
+.jinui_btn_inline {
+  display: inline-block; }
+
+.jinui_btn_disabled {
+  color: rgba(255, 255, 255, 0.6); }
+  .jinui_btn_disabled.jinui_btn {
+    color: #C9C9C9;
+    border-color: #E9E9E9; }
+
+.jinui_btn_default {
+  color: #454545;
+  background: #F7F7F7; }
+  .jinui_btn_default:not(.jinui_btn_disabled):active {
+    color: #A1A1A1;
+    background-color: #DEDEDE; }
+  .jinui_btn_default.jinui_btn_line {
+    background: inherit; }
+    .jinui_btn_default.jinui_btn_line:after {
+      border-color: #A1A1A1; }
+    .jinui_btn_default.jinui_btn_line:not(.jinui_btn_disabled):active {
+      color: #A1A1A1;
+      background-color: inherit; }
+      .jinui_btn_default.jinui_btn_line:not(.jinui_btn_disabled):active:after {
+        border-color: #A1A1A1; }
+
+.jinui_btn_primary {
+  color: #FFFFFF;
+  background: #04BE02; }
+  .jinui_btn_primary:not(.jinui_btn_disabled):active {
+    color: #DEDEDE;
+    background-color: #03a502; }
+  .jinui_btn_primary.jinui_btn_line {
+    background: inherit;
+    color: #04BE02; }
+    .jinui_btn_primary.jinui_btn_line:after {
+      border-color: #04BE02; }
+    .jinui_btn_primary.jinui_btn_line:not(.jinui_btn_disabled):active {
+      color: #03a502;
+      background-color: inherit; }
+      .jinui_btn_primary.jinui_btn_line:not(.jinui_btn_disabled):active:after {
+        border-color: #03a502; }
+
+.jinui_btn_info {
+  color: #FFFFFF;
+  background: #0a8ddf; }
+  .jinui_btn_info:not(.jinui_btn_disabled):active {
+    color: #DEDEDE;
+    background-color: #097ec7; }
+  .jinui_btn_info.jinui_btn_line {
+    background: inherit;
+    color: #0a8ddf; }
+    .jinui_btn_info.jinui_btn_line:after {
+      border-color: #0a8ddf; }
+    .jinui_btn_info.jinui_btn_line:not(.jinui_btn_disabled):active {
+      color: #097ec7;
+      background-color: inherit; }
+      .jinui_btn_info.jinui_btn_line:not(.jinui_btn_disabled):active:after {
+        border-color: #097ec7; }
+
+.jinui_btn_danger {
+  color: #FFFFFF;
+  background: #f6383a; }
+  .jinui_btn_danger:not(.jinui_btn_disabled):active {
+    color: #DEDEDE;
+    background-color: #f52022; }
+  .jinui_btn_danger.jinui_btn_line {
+    background: inherit;
+    color: #f6383a; }
+    .jinui_btn_danger.jinui_btn_line:after {
+      border-color: #f6383a; }
+    .jinui_btn_danger.jinui_btn_line:not(.jinui_btn_disabled):active {
+      color: #f52022;
+      background-color: inherit; }
+      .jinui_btn_danger.jinui_btn_line:not(.jinui_btn_disabled):active:after {
+        border-color: #f52022; }
+
+.jinui_btn_warning {
+  color: #FFFFFF;
+  background: #f60; }
+  .jinui_btn_warning:not(.jinui_btn_disabled):active {
+    color: #DEDEDE;
+    background-color: #e65c00; }
+  .jinui_btn_warning.jinui_btn_line {
+    background: inherit;
+    color: #f60; }
+    .jinui_btn_warning.jinui_btn_line:after {
+      border-color: #f60; }
+    .jinui_btn_warning.jinui_btn_line:not(.jinui_btn_disabled):active {
+      color: #e65c00;
+      background-color: inherit; }
+      .jinui_btn_warning.jinui_btn_line:not(.jinui_btn_disabled):active:after {
+        border-color: #e65c00; }
+
+.jinui_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+  .jinui_row > [class*="col_"] {
+    box-sizing: border-box; }
+
+.jinui_row .jinui_col_5 {
+  width: 5%;
+  width: calc((100% - 10px*19)/20); }
+
+.jinui_row.jinui_no_gutter .jinui_col_5 {
+  width: 5%; }
+
+.jinui_row .jinui_col_10 {
+  width: 10%;
+  width: calc((100% - 10px*9)/10); }
+
+.jinui_row.jinui_no_gutter .jinui_col_10 {
+  width: 10%; }
+
+.jinui_row .jinui_col_15 {
+  width: 15%;
+  width: calc((100% - 10px*5.66667)/6.66667); }
+
+.jinui_row.jinui_no_gutter .jinui_col_15 {
+  width: 15%; }
+
+.jinui_row .jinui_col_20 {
+  width: 20%;
+  width: calc((100% - 10px*4)/5); }
+
+.jinui_row.jinui_no_gutter .jinui_col_20 {
+  width: 20%; }
+
+.jinui_row .jinui_col_25 {
+  width: 25%;
+  width: calc((100% - 10px*3)/4); }
+
+.jinui_row.jinui_no_gutter .jinui_col_25 {
+  width: 25%; }
+
+.jinui_row .jinui_col_33 {
+  width: 33.33333%;
+  width: calc((100% - 10px*2)/3); }
+
+.jinui_row.jinui_no_gutter .jinui_col_33 {
+  width: 33.33333%; }
+
+.jinui_row .jinui_col_40 {
+  width: 40%;
+  width: calc((100% - 10px*1.5)/2.5); }
+
+.jinui_row.jinui_no_gutter .jinui_col_40 {
+  width: 40%; }
+
+.jinui_row .jinui_col_50 {
+  width: 50%;
+  width: calc((100% - 10px*1)/2); }
+
+.jinui_row.jinui_no_gutter .jinui_col_50 {
+  width: 50%; }
+
+.jinui_row .jinui_col_60 {
+  width: 60%;
+  width: calc((100% - 10px*0.66667)/1.66667); }
+
+.jinui_row.jinui_no_gutter .jinui_col_60 {
+  width: 60%; }
+
+.jinui_row .jinui_col_66 {
+  width: 66.66667%;
+  width: calc((100% - 10px*0.5)/1.5); }
+
+.jinui_row.jinui_no_gutter .jinui_col_66 {
+  width: 66.66667%; }
+
+.jinui_row .jinui_col_75 {
+  width: 75%;
+  width: calc((100% - 10px*0.33333)/1.33333); }
+
+.jinui_row.jinui_no_gutter .jinui_col_75 {
+  width: 75%; }
+
+.jinui_row .jinui_col_80 {
+  width: 80%;
+  width: calc((100% - 10px*0.25)/1.25); }
+
+.jinui_row.jinui_no_gutter .jinui_col_80 {
+  width: 80%; }
+
+.jinui_row .jinui_col_85 {
+  width: 85%;
+  width: calc((100% - 10px*0.17647)/1.17647); }
+
+.jinui_row.jinui_no_gutter .jinui_col_85 {
+  width: 85%; }
+
+.jinui_row .jinui_col_90 {
+  width: 90%;
+  width: calc((100% - 10px*0.11111)/1.11111); }
+
+.jinui_row.jinui_no_gutter .jinui_col_90 {
+  width: 90%; }
+
+.jinui_row .jinui_col_95 {
+  width: 95%;
+  width: calc((100% - 10px*0.05263)/1.05263); }
+
+.jinui_row.jinui_no_gutter .jinui_col_95 {
+  width: 95%; }
+
+.jinui_row .jinui_col_100 {
+  width: 100%;
+  width: calc((100% - 10px*0)/1); }
+
+.jinui_row.jinui_no_gutter .jinui_col_100 {
+  width: 100%; }
