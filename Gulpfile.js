@@ -4,7 +4,18 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var sass = require("gulp-sass");
+var header = require('gulp-header');
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
 
+var pkg = require("./package.json");
+
+var banner = 
+"/** \n\
+* JinUI V" + pkg.version + " \n\
+* By Puter\n\
+* https://zanderpu.github.com/JinUI\n \
+*/\n";
 
 // 语法检查
 gulp.task('jshint', function() {
@@ -17,21 +28,23 @@ gulp.task('jshint', function() {
 // 合并文件之后压缩代码
 gulp.task('minify', function() {
     return gulp.src('src/js/*.js')
-        .pipe(concat('JinUI.js'))
+        .pipe(concat('jinui.js'))
         .pipe(gulp.dest('dist'))
         .pipe(uglify())
-        .pipe(rename('JinUI.min.js'))
+        .pipe(rename('jinui.min.js'))
         .pipe(gulp.dest('dist'));
 });
 
 //编译scss文件
 gulp.task("scss", function() {
-    return gulp.src('src/scss/*.scss')
+    return gulp.src('src/scss/jinui.scss')
         .pipe(sass())
-        .pipe(gulp.dest('src/css'))
+        .pipe(postcss([autoprefixer]))
+        .pipe(header(banner))
+        .pipe(gulp.dest('dist'))
         .pipe(sass({outputStyle: 'compressed'}))
-        .pipe(rename('JinUI.min.css'))
-        .pipe(gulp.dest('dist'));
+        .pipe(rename('jinui.min.css'));
+        
 });
 
 // 监视文件的变化

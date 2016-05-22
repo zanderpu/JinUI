@@ -1,0 +1,35 @@
+//栅格
+
+.jinui_row{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap:wrap;
+	align-items:flex-start;
+	> [class*="col_"] {
+		box-sizing: border-box;
+	}
+}
+
+$cols: 5, 10, 15, 20, 25, 100/3, 40, 50, 60, 100*(2/3), 75, 80, 85, 90, 95, 100;
+
+.jinui_row{
+	$i:1;
+	@while $i <= length($cols) {
+		$divider: nth($cols, $i);
+		$className: floor($divider);
+		$n: 100/$divider;
+		$n-1: $n - 1;
+	    .jinui_col_#{$className}{
+	    	width:$divider + %;
+			width: calc((100% - 10px*#{$n-1})/#{$n});
+				
+	    }
+	    &.jinui_no_gutter {
+	    	.jinui_col_#{$className}{
+		    	width:$divider + %;
+		    }
+	    }
+	    $i: $i + 1;
+	}
+
+}

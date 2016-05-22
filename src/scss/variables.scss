@@ -1,9 +1,55 @@
 //
 // 变量
 //
+//字体
+// font family
+$sansFont:"Helvetica Neue",Helvetica,Arial,sans-serif;
+$serifFont:Georgia, "Times New Roman",Times,serif;
+$wpFont:"Microsoft YaHei",sans-serif;
+$bizFont:"Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+$globalFont:$sansFont;
+$globalFontSize:16px;
 
 //颜色
+$color-primary: #04BE02;
+$color-info: #0a8ddf;
+$color-danger: #f6383a;
+$color-warning: #f60;
+$color-success: #4cd964;
 
+
+$color-primary-active: darken($color-primary, 5%);
+$color-info-active: darken($color-info, 5%);
+$color-danger-active: darken($color-danger, 5%);
+$color-warning-active: darken($color-warning, 5%);
+$color-success-active: darken($color-success, 5%);
+
+
+$color-split: #e7e7e7;  //分割线的颜色
+$color-bg: #eee;//颜色背景
+$color-text: #3d4145; //文案色
+$color-text-secondary: #5f646e; //次级文案
+$color-text-gray: #9b9b9b; //灰色文案
+$color-text-gray-light: #EFEFF4; //更灰色文案
+
+$color-hairline: #D9D9D9;
 
 
 //大小
+
+
+
+//按钮
+$weuiBtnHeight:42px;
+$weuiBtnFontSize:$globalFontSize*1.125;
+$weuiBtnFontColor:#FFFFFF;
+$weuiBtnBorderRadius:5px;
+
+//默认按钮颜色
+$weuiBtnDefaultBg:#F7F7F7;
+$weuiBtnDefaultActiveBg:#DEDEDE;
+$weuiBtnDefaultFontColor:#454545;
+$weuiBtnDefaultDisabledFontColor:#C9C9C9;
+$weuiBtnDefaultActiveFontColor:#A1A1A1;
+
+$weuiBtnActiveFontColor:#DEDEDE;//按钮激活文字颜色

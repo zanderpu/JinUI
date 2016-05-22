@@ -1,0 +1,178 @@
+//按钮
+
+
+.jinui_btn{
+	position: relative;
+	display: block;
+	font-size: $weuiBtnFontSize;
+	text-align: center;
+	text-decoration: none;
+	color:#454545;
+	border-radius: $weuiBtnBorderRadius;
+	padding:1px 14px;
+	background:#F7F7F7;
+	box-sizing: border-box;
+	line-height: $weuiBtnHeight/$weuiBtnFontSize;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	overflow: hidden;
+	&+.jinui_btn{
+		margin-top: 15px;
+	}
+	&:after{
+		content: " ";
+	    width: 200%;
+	    height: 200%;
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+		border:1px solid $color-hairline;
+		transform: scale(0.5);
+		transform-origin: 0 0;
+	    box-sizing: border-box;
+	    border-radius: 10px;
+	}
+}
+.jinui_btn_inline{
+	display: inline-block;
+}
+.jinui_btn_disabled {
+    color: rgba(255, 255, 255, 0.6);
+    &.jinui_btn{
+    	color: $weuiBtnDefaultDisabledFontColor;
+    	border-color: #E9E9E9;
+    }
+}
+
+.jinui_btn_default{
+	color:$weuiBtnDefaultFontColor;
+	background:$weuiBtnDefaultBg;
+	&:not(.jinui_btn_disabled){
+		&:active{
+			color:$weuiBtnDefaultActiveFontColor;
+			background-color:$weuiBtnDefaultActiveBg;
+		}
+	}
+	&.jinui_btn_line{
+		background:inherit;
+		&:after{
+			border-color: $weuiBtnDefaultActiveFontColor;
+		}
+		&:not(.jinui_btn_disabled){
+			&:active{
+				color:$weuiBtnDefaultActiveFontColor;
+				background-color:inherit;
+				&:after{
+					border-color: $weuiBtnDefaultActiveFontColor;
+				}
+			}
+		}
+	}
+}
+
+.jinui_btn_primary{
+	color:$weuiBtnFontColor;
+	background:$color-primary;
+	&:not(.jinui_btn_disabled){
+		&:active{
+			color:$weuiBtnActiveFontColor;
+			background-color:$color-primary-active;
+		}
+	}
+	&.jinui_btn_line{
+		background:inherit;
+		color:$color-primary;
+		&:after{
+			border-color: $color-primary;
+		}
+		&:not(.jinui_btn_disabled){
+			&:active{
+				color:$color-primary-active;
+				background-color:inherit;
+				&:after{
+					border-color: $color-primary-active;
+				}
+			}
+		}
+	}
+}
+
+.jinui_btn_info{
+	color:$weuiBtnFontColor;
+	background:$color-info;
+	&:not(.jinui_btn_disabled){
+		&:active{
+			color:$weuiBtnActiveFontColor;
+			background-color:$color-info-active;
+		}
+	}
+	&.jinui_btn_line{
+		background:inherit;
+		color:$color-info;
+		&:after{
+			border-color: $color-info;
+		}
+		&:not(.jinui_btn_disabled){
+			&:active{
+				color:$color-info-active;
+				background-color:inherit;
+				&:after{
+					border-color: $color-info-active;
+				}
+			}
+		}
+	}
+}
+
+.jinui_btn_danger{
+	color:$weuiBtnFontColor;
+	background:$color-danger;
+	&:not(.jinui_btn_disabled){
+		&:active{
+			color:$weuiBtnActiveFontColor;
+			background-color:$color-danger-active;
+		}
+	}
+	&.jinui_btn_line{
+		background:inherit;
+		color:$color-danger;
+		&:after{
+			border-color: $color-danger;
+		}
+		&:not(.jinui_btn_disabled){
+			&:active{
+				color:$color-danger-active;
+				background-color:inherit;
+				&:after{
+					border-color: $color-danger-active;
+				}
+			}
+		}
+	}
+}
+
+.jinui_btn_warning{
+	color:$weuiBtnFontColor;
+	background:$color-warning;
+	&:not(.jinui_btn_disabled){
+		&:active{
+			color:$weuiBtnActiveFontColor;
+			background-color:$color-warning-active;
+		}
+	}
+	&.jinui_btn_line{
+		background:inherit;
+		color:$color-warning;
+		&:after{
+			border-color: $color-warning;
+		}
+		&:not(.jinui_btn_disabled){
+			&:active{
+				color:$color-warning-active;
+				background-color:inherit;
+				&:after{
+					border-color: $color-warning-active;
+				}
+			}
+		}
+	}
+}
