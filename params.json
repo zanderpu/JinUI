@@ -1,0 +1,6 @@
+{
+  "name": "Jinui",
+  "tagline": "移动端UI框架",
+  "body": "#JinUI\r\n\r\nJinUI是一个移动端框架\r\n借鉴weui样式，并进行扩展\r\n\r\n##gulp\r\n使用gulp构建\r\n\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
