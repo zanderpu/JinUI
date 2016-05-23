@@ -1,7 +1,6 @@
 //宏定义
 
-
-//边框
+//上边框
 @mixin setTopLine($width:1px){
 	content: " ";
     position: absolute;
@@ -14,7 +13,7 @@
     transform-origin: 0 0;
     transform: scaleY(0.5);
 }
-
+//下边框
 @mixin setBottomLine($width:1px){
 	content: " ";
     position: absolute;
