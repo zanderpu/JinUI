@@ -1,8 +1,13 @@
 @import "variables.scss";
-@import "base.scss";
+@import "mixin.scss";
 
+
+
+@import "base.scss";
 
 @import "article.scss";
 
 @import "button.scss";
 @import "grid.scss";
+
+@import "list.scss";

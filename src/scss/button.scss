@@ -4,15 +4,15 @@
 .jinui_btn{
 	position: relative;
 	display: block;
-	font-size: $weuiBtnFontSize;
+	font-size: $jinuiBtnFontSize;
 	text-align: center;
 	text-decoration: none;
 	color:#454545;
-	border-radius: $weuiBtnBorderRadius;
+	border-radius: $jinuiBtnBorderRadius;
 	padding:1px 14px;
 	background:#F7F7F7;
 	box-sizing: border-box;
-	line-height: $weuiBtnHeight/$weuiBtnFontSize;
+	line-height: $jinuiBtnHeight/$jinuiBtnFontSize;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	overflow: hidden;
 	&+.jinui_btn{
@@ -38,31 +38,31 @@
 .jinui_btn_disabled {
     color: rgba(255, 255, 255, 0.6);
     &.jinui_btn{
-    	color: $weuiBtnDefaultDisabledFontColor;
+    	color: $jinuiBtnDefaultDisabledFontColor;
     	border-color: #E9E9E9;
     }
 }
 
 .jinui_btn_default{
-	color:$weuiBtnDefaultFontColor;
-	background:$weuiBtnDefaultBg;
+	color:$jinuiBtnDefaultFontColor;
+	background:$jinuiBtnDefaultBg;
 	&:not(.jinui_btn_disabled){
 		&:active{
-			color:$weuiBtnDefaultActiveFontColor;
-			background-color:$weuiBtnDefaultActiveBg;
+			color:$jinuiBtnDefaultActiveFontColor;
+			background-color:$jinuiBtnDefaultActiveBg;
 		}
 	}
 	&.jinui_btn_line{
 		background:inherit;
 		&:after{
-			border-color: $weuiBtnDefaultActiveFontColor;
+			border-color: $jinuiBtnDefaultActiveFontColor;
 		}
 		&:not(.jinui_btn_disabled){
 			&:active{
-				color:$weuiBtnDefaultActiveFontColor;
+				color:$jinuiBtnDefaultActiveFontColor;
 				background-color:inherit;
 				&:after{
-					border-color: $weuiBtnDefaultActiveFontColor;
+					border-color: $jinuiBtnDefaultActiveFontColor;
 				}
 			}
 		}
@@ -70,11 +70,11 @@
 }
 
 .jinui_btn_primary{
-	color:$weuiBtnFontColor;
+	color:$jinuiBtnFontColor;
 	background:$color-primary;
 	&:not(.jinui_btn_disabled){
 		&:active{
-			color:$weuiBtnActiveFontColor;
+			color:$jinuiBtnActiveFontColor;
 			background-color:$color-primary-active;
 		}
 	}
@@ -97,11 +97,11 @@
 }
 
 .jinui_btn_info{
-	color:$weuiBtnFontColor;
+	color:$jinuiBtnFontColor;
 	background:$color-info;
 	&:not(.jinui_btn_disabled){
 		&:active{
-			color:$weuiBtnActiveFontColor;
+			color:$jinuiBtnActiveFontColor;
 			background-color:$color-info-active;
 		}
 	}
@@ -124,11 +124,11 @@
 }
 
 .jinui_btn_danger{
-	color:$weuiBtnFontColor;
+	color:$jinuiBtnFontColor;
 	background:$color-danger;
 	&:not(.jinui_btn_disabled){
 		&:active{
-			color:$weuiBtnActiveFontColor;
+			color:$jinuiBtnActiveFontColor;
 			background-color:$color-danger-active;
 		}
 	}
@@ -151,11 +151,11 @@
 }
 
 .jinui_btn_warning{
-	color:$weuiBtnFontColor;
+	color:$jinuiBtnFontColor;
 	background:$color-warning;
 	&:not(.jinui_btn_disabled){
 		&:active{
-			color:$weuiBtnActiveFontColor;
+			color:$jinuiBtnActiveFontColor;
 			background-color:$color-warning-active;
 		}
 	}

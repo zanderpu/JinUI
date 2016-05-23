@@ -1,0 +1,57 @@
+//列表
+
+.jinui_list_title{
+	margin-top: .77em;
+    margin-bottom: .3em;
+    padding:0 $jinuiListGapH;
+    color: $color-tip;
+    font-size: 14px;
+}
+
+.jinui_lists{
+	position: relative;
+	overflow: hidden;
+	line-height: 1.5;
+	&:before{
+		@include setTopLine();
+	}
+	&:after{
+		@include setBottomLine();
+	}
+}
+
+.jinui_list{
+	padding:10px $jinuiListGapH;
+	position: relative;
+	display: flex;
+	align-items: center;
+	&:before{
+		@include setTopLine();
+		left:$jinuiListGapH;
+	}
+	&:first-child{
+		&:before{
+			display: none;
+		}
+	}
+}
+.jinui_list_nospace{
+	.jinui_list{
+		padding:10px $jinuiListGapH;
+		&:before{
+			left:0;
+		}
+	}
+}
+
+.jinui_lists + .jinui_lists{
+	margin-top: 10px;
+}
+
+.jinui_list_bd{
+	flex:1;
+}
+.jinui_list_ft {
+    text-align: right;
+    color: $color-tip;
+}

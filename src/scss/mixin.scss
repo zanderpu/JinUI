@@ -1,0 +1,29 @@
+//宏定义
+
+
+//边框
+@mixin setTopLine($width:1px){
+	content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: $width;
+    border-top: $width solid $color-split;
+    color: #D9D9D9;
+    transform-origin: 0 0;
+    transform: scaleY(0.5);
+}
+
+@mixin setBottomLine($width:1px){
+	content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: $width;
+    border-bottom: $width solid $color-split;
+    color: #D9D9D9;
+    transform-origin: 0 100%;
+    transform: scaleY(0.5);
+}
