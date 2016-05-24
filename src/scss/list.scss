@@ -25,6 +25,7 @@
 	position: relative;
 	display: flex;
 	align-items: center;
+	color:$color-text;
 	&:before{
 		@include setTopLine();
 		left:$jinuiListGapH;
@@ -54,4 +55,29 @@
 .jinui_list_ft {
     text-align: right;
     color: $color-tip;
+}
+.jinui_list_icon{
+	width:20px;
+	margin-right:5px;
+	display:block
+}
+
+.jinui_lists_link{
+	.jinui_list:not(.no_access){
+		&:active {
+            background-color: #ECECEC;
+        }
+	}
+	.jinui_list_ft{
+		&:after{
+			content: " ";
+			width: 6px;
+			height: 6px;
+			border:2px solid #ccc;
+			display: inline-block;
+			transform:rotate(45deg);
+			border-color: #ccc #ccc transparent transparent;
+
+		}
+	}
 }
