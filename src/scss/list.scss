@@ -81,3 +81,18 @@
 		}
 	}
 }
+
+.jinui_lists_info{
+	.jinui_list{
+		align-items:flex-start;
+	}
+	.jinui_list_bd{
+		width: 80px;
+		flex:inherit;
+		margin-right: 5px;
+	}
+	.jinui_list_ft{
+		flex:1;
+		text-align: left;
+	}
+}

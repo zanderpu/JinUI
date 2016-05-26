@@ -396,3 +396,22 @@ li {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   border-color: #ccc #ccc transparent transparent; }
+
+.jinui_lists_info .jinui_list {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+              -ms-grid-row-align: flex-start;
+          align-items: flex-start; }
+
+.jinui_lists_info .jinui_list_bd {
+  width: 80px;
+  -webkit-box-flex: inherit;
+      -ms-flex: inherit;
+          flex: inherit;
+  margin-right: 5px; }
+
+.jinui_lists_info .jinui_list_ft {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: left; }
