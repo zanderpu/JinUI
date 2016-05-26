@@ -83,15 +83,15 @@
 }
 
 .jinui_lists_info{
-	.jinui_list{
+	.jinui_list:not(.jinui_vcode){
 		align-items:flex-start;
 	}
-	.jinui_list_bd{
+	.jinui_list_hd{
 		width: 80px;
 		flex:inherit;
 		margin-right: 5px;
 	}
-	.jinui_list_ft{
+	.jinui_list_bd{
 		flex:1;
 		text-align: left;
 	}

@@ -1,0 +1,46 @@
+//表单
+//
+.jinui_input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    appearance: none;
+    background-color: transparent;
+    font-size: inherit;
+    color: $color-text;
+    height: 1.41176471em;
+    line-height: 1.41176471;
+}
+
+.jinui_vcode{
+	padding-top:0;
+	padding-right:0;
+	padding-bottom: 0;
+	align-items: center;
+	.jinui_list_ft{
+		margin-left: 5px;
+		img{
+			height: 44px;
+			vertical-align: middle;
+		}
+	}	
+}
+
+.jinui_textarea{
+	width: 100%;
+    border: 0;
+    outline: 0;
+    appearance: none;
+    background-color: transparent;
+    font-size: inherit;
+    color: $color-text;
+    resize: none;
+}
+.jinui_textarea_count{
+	text-align: right;
+	color:$color-text-gray;
+}
+
+.jinui_btn_area{
+	padding:20px 15px;
+}

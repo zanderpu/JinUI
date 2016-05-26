@@ -397,21 +397,67 @@ li {
           transform: rotate(45deg);
   border-color: #ccc #ccc transparent transparent; }
 
-.jinui_lists_info .jinui_list {
+.jinui_lists_info .jinui_list:not(.jinui_vcode) {
   -webkit-box-align: start;
       -ms-flex-align: start;
               -ms-grid-row-align: flex-start;
           align-items: flex-start; }
 
-.jinui_lists_info .jinui_list_bd {
+.jinui_lists_info .jinui_list_hd {
   width: 80px;
   -webkit-box-flex: inherit;
       -ms-flex: inherit;
           flex: inherit;
   margin-right: 5px; }
 
-.jinui_lists_info .jinui_list_ft {
+.jinui_lists_info .jinui_list_bd {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   text-align: left; }
+
+.jinui_input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  font-size: inherit;
+  color: #3d4145;
+  height: 1.41176471em;
+  line-height: 1.41176471; }
+
+.jinui_vcode {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+              -ms-grid-row-align: center;
+          align-items: center; }
+  .jinui_vcode .jinui_list_ft {
+    margin-left: 5px; }
+    .jinui_vcode .jinui_list_ft img {
+      height: 44px;
+      vertical-align: middle; }
+
+.jinui_textarea {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  font-size: inherit;
+  color: #3d4145;
+  resize: none; }
+
+.jinui_textarea_count {
+  text-align: right;
+  color: #9b9b9b; }
+
+.jinui_btn_area {
+  padding: 20px 15px; }
