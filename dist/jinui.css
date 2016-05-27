@@ -397,18 +397,16 @@ li {
           transform: rotate(45deg);
   border-color: #ccc #ccc transparent transparent; }
 
-.jinui_lists_info .jinui_list:not(.jinui_vcode) {
+.jinui_label {
+  display: inline-block;
+  width: 80px;
+  margin-right: 5px; }
+
+.jinui_lists_info .jinui_list {
   -webkit-box-align: start;
       -ms-flex-align: start;
               -ms-grid-row-align: flex-start;
           align-items: flex-start; }
-
-.jinui_lists_info .jinui_list_hd {
-  width: 80px;
-  -webkit-box-flex: inherit;
-      -ms-flex: inherit;
-          flex: inherit;
-  margin-right: 5px; }
 
 .jinui_lists_info .jinui_list_bd {
   -webkit-box-flex: 1;
@@ -427,7 +425,8 @@ li {
   font-size: inherit;
   color: #3d4145;
   height: 1.41176471em;
-  line-height: 1.41176471; }
+  line-height: 1.41176471;
+  border-radius: 0; }
 
 .jinui_vcode {
   padding-top: 0;
@@ -453,7 +452,8 @@ li {
   background-color: transparent;
   font-size: inherit;
   color: #3d4145;
-  resize: none; }
+  resize: none;
+  border-radius: 0; }
 
 .jinui_textarea_count {
   text-align: right;
@@ -461,3 +461,60 @@ li {
 
 .jinui_btn_area {
   padding: 20px 15px; }
+
+.jinui_list_select {
+  padding: 0;
+  padding-left: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+              -ms-grid-row-align: center;
+          align-items: center; }
+  .jinui_list_select .jinui_list_bd {
+    position: relative; }
+    .jinui_list_select .jinui_list_bd:after {
+      content: " ";
+      width: 6px;
+      height: 6px;
+      border: 2px solid #ccc;
+      display: inline-block;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+      border-color: #ccc #ccc transparent transparent;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      margin-top: -5px; }
+
+.jinui_select {
+  width: 100%;
+  background-color: transparent;
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  height: 44px;
+  line-height: 44px;
+  font-size: inherit;
+  color: #3d4145; }
+
+.jinui_select_before .jinui_select {
+  width: 80px;
+  margin-right: 5px; }
+
+.jinui_select_before .jinui_list_hd {
+  position: relative; }
+  .jinui_select_before .jinui_list_hd:after {
+    content: " ";
+    width: 6px;
+    height: 6px;
+    border: 2px solid #ccc;
+    display: inline-block;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    border-color: #ccc #ccc transparent transparent;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -5px; }
+
+.jinui_select_before .jinui_list_bd:after {
+  display: none; }

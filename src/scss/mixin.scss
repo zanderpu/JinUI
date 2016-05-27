@@ -1,8 +1,7 @@
 //宏定义
-
 //上边框
-@mixin setTopLine($width:1px){
-	content: " ";
+@mixin setTopLine($width:1px) {
+    content: " ";
     position: absolute;
     left: 0;
     top: 0;
@@ -13,9 +12,10 @@
     transform-origin: 0 0;
     transform: scaleY(0.5);
 }
+
 //下边框
-@mixin setBottomLine($width:1px){
-	content: " ";
+@mixin setBottomLine($width:1px) {
+    content: " ";
     position: absolute;
     left: 0;
     bottom: 0;
@@ -25,4 +25,15 @@
     color: #D9D9D9;
     transform-origin: 0 100%;
     transform: scaleY(0.5);
+}
+
+//箭头
+@mixin setArrow() {
+    content: " ";
+    width: 6px;
+    height: 6px;
+    border: 2px solid #ccc;
+    display: inline-block;
+    transform: rotate(45deg);
+    border-color: #ccc #ccc transparent transparent;
 }

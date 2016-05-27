@@ -10,6 +10,7 @@
     color: $color-text;
     height: 1.41176471em;
     line-height: 1.41176471;
+    border-radius: 0;
 }
 
 .jinui_vcode{
@@ -35,6 +36,7 @@
     font-size: inherit;
     color: $color-text;
     resize: none;
+    border-radius: 0;
 }
 .jinui_textarea_count{
 	text-align: right;
@@ -42,5 +44,55 @@
 }
 
 .jinui_btn_area{
-	padding:20px 15px;
+	padding:20px $jinuiBodyAreaW;
+}
+
+
+.jinui_list_select{
+    padding:0;
+    padding-left: $jinuiBodyAreaW;
+    align-items: center;
+    .jinui_list_bd{
+        position: relative;
+        &:after{
+            @include setArrow();
+            position: absolute;
+            top: 50%;
+            right: $jinuiBodyAreaW;
+            margin-top: -5px;
+        }
+    }
+    
+}
+.jinui_select{
+    width: 100%;
+    background-color: transparent;
+    -webkit-appearance: none;
+    border:none;
+    outline: none;
+    height: 44px;
+    line-height: 44px;
+    font-size: inherit;
+    color:$color-text;
+}
+.jinui_select_before{
+    .jinui_select{
+        width: 80px;
+        margin-right: 5px;
+    }
+    .jinui_list_hd{
+        position: relative;
+        &:after{
+            @include setArrow();
+            position: absolute;
+            top: 50%;
+            right: $jinuiBodyAreaW;
+            margin-top: -5px;
+        }
+    }
+    .jinui_list_bd{
+        &:after{
+            display: none;
+        }
+    }
 }
