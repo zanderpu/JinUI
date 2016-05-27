@@ -3,7 +3,7 @@
 .jinui_list_title{
 	margin-top: .77em;
     margin-bottom: .3em;
-    padding:0 $jinuiListGapH;
+    padding:0 $jinuiBodyAreaW;
     color: $color-tip;
     font-size: 14px;
 }
@@ -21,14 +21,14 @@
 }
 
 .jinui_list{
-	padding:10px $jinuiListGapH;
+	padding:10px $jinuiBodyAreaW;
 	position: relative;
 	display: flex;
 	align-items: center;
 	color:$color-text;
 	&:before{
 		@include setTopLine();
-		left:$jinuiListGapH;
+		left:$jinuiBodyAreaW;
 	}
 	&:first-child{
 		&:before{
@@ -38,7 +38,7 @@
 }
 .jinui_list_nospace{
 	.jinui_list{
-		padding:10px $jinuiListGapH;
+		padding:10px $jinuiBodyAreaW;
 		&:before{
 			left:0;
 		}
@@ -70,26 +70,19 @@
 	}
 	.jinui_list_ft{
 		&:after{
-			content: " ";
-			width: 6px;
-			height: 6px;
-			border:2px solid #ccc;
-			display: inline-block;
-			transform:rotate(45deg);
-			border-color: #ccc #ccc transparent transparent;
-
+			@include setArrow();
 		}
 	}
 }
 
+.jinui_label{
+	display: inline-block;
+	width: 80px;
+	margin-right: 5px;
+}
 .jinui_lists_info{
-	.jinui_list:not(.jinui_vcode){
+	.jinui_list{
 		align-items:flex-start;
-	}
-	.jinui_list_hd{
-		width: 80px;
-		flex:inherit;
-		margin-right: 5px;
 	}
 	.jinui_list_bd{
 		flex:1;
