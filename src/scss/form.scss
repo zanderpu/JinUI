@@ -96,3 +96,146 @@
         }
     }
 }
+
+.jinui_list_switch{
+    padding:7px 15px;
+    .jinui_list_hd{
+        flex:1;
+    }
+}
+
+.jinui_switch{
+    appearance: none;
+    position: relative;
+    width:50px;
+    height: 30px;
+    display: block;
+    outline: none;
+    border-radius: 16px;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    border:1px solid $color-hairline;
+    background: $color-hairline;
+    transition: all .3s;
+    &:before{
+        content:' ';
+        display: block;
+        width: 48px;
+        height: 28px;
+        border-radius: 40px;
+        position: absolute;
+        left: 0;
+        top:0;
+        background: #fff; 
+        transition: all .3s;
+    }
+    &:after{
+        content:' ';
+        display: block;
+        width: 28px;
+        height: 28px;
+        box-shadow: 0 1px 3px rgba(0,0,0,.4);
+        border-radius: 14px;
+        position: absolute;
+        left: 0;
+        top:0px;
+        background:#fff;
+        transition: transform .3s;
+    }
+    &:checked{
+        border-color:$color-primary;
+        background:$color-primary;
+        &:before{
+            background:$color-primary;
+        }
+        &:after{
+            transform: translateX(20px);
+        }
+    }
+}
+
+.jinui_list_warn{
+    color:$color-danger;
+}
+.jinui_uploader_hd{
+    padding:0 0 10px 0;
+}
+.jinui_uploader_bd{
+    clear: both;
+    overflow: hidden;
+}
+.jinui_uploader_file{
+    float: left;
+    position: relative;
+    margin:0 10px 10px 0;
+}
+.jinui_uploader_image{
+    width: 80px;
+    height: 80px;
+    
+    display: block;
+}
+.jinui_uploader_remove{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 20px;
+    background:$color-danger;
+    text-align: center;
+    color:#fff;
+}
+.jinui_uploader_status{
+    &:before{
+        content:'';
+        display: block;
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background:rgba(0,0,0,.5);
+    }
+}
+.jinui_uploader_status_content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color:#fff;
+}
+.jinui_uploader_add{
+    width: 78px;
+    height: 78px;
+    border:1px solid #ccc;
+    position: relative;
+    float: left;
+    &:before,
+    &:after{
+        content: '';
+        display: block;
+        width: 40px;
+        height: 1px;
+        background:#ccc;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    &:after{
+        width: 1px;
+        height: 40px;
+    }
+}
+.jinui_uploader_input{
+    appearance: none;
+    position: absolute;
+    width: 78px;
+    height: 78px;
+    opacity: 0;
+    left: 0;
+    top:0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}

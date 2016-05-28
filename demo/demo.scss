@@ -14,8 +14,29 @@
 	margin-bottom: 10px;
 }
 [class*="jinui_col_"] {
-    border: 1px solid #ccc;
+    border: 1px solid #F0F0F0;
     height: 40px;
     line-height: 40px;
     text-align: center;
+}
+
+.demo_grid{
+	margin: 0;
+	border-top: 1px solid #F0F0F0;
+	[class*="jinui_col_"] {
+		border-width: 0 1px 1px 0;
+	    height: 60px;
+	    line-height: 60px;
+	    text-align: center;
+
+	}
+
+	+ .demo_grid{
+		border-top:0;
+	}
+
+	a{
+		display: block;
+		color:#000;
+	}
 }
