@@ -13,7 +13,7 @@
 	background:#F7F7F7;
 	box-sizing: border-box;
 	line-height: $jinuiBtnHeight/$jinuiBtnFontSize;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	@include tapHighlight();
 	overflow: hidden;
 	&+.jinui_btn{
 		margin-top: 15px;

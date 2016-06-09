@@ -14,3 +14,4 @@ JinUI是一个移动端框架
 * 表单
 * iconfont
 * msg页面
+* 标签页

@@ -1,0 +1,69 @@
+/*tab*/
+
+.jinui_tab{
+	background:#fff;
+}
+.jinui_tab_items{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content:space-between;
+	position: relative;
+	&:before{
+		@include setTopLine();
+	}
+	&:after{
+		@include setBottomLine();
+	}
+	.jinui_tab_item{
+		&:last-child{
+			&:after{
+				display: none;
+			}
+		}
+	}
+}
+.jinui_tab_item{
+	flex:1;
+	position: relative;
+	@include tapHighlight();
+	text-align: center;
+	padding:12px 0;
+	&:after{
+		@include setRightLine();
+	}
+}
+
+.jinui_tab_item_active{
+	background:$color-bg;
+}
+
+.jinui_tab_link{
+	.jinui_tab_items{
+		&:before{
+			display: none;
+		}
+		&:after{
+			display: none;
+		}
+	}
+	.jinui_tab_item{
+		&:after{
+			display: none;
+		}
+	}
+	.jinui_tab_item_active{
+		background:inherit;
+		color:$color-primary;
+		&:after{
+			display: block;
+			border-right-width:0;
+			border-bottom: 2px solid $color-primary;
+			top: inherit;
+			left: 0;
+    		bottom: 0;
+    		right: 0;
+    		width: 100%;
+    		transform: scaleX(1);
+		}
+	}
+}

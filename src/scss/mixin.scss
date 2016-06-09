@@ -27,6 +27,22 @@
     transform: scaleY(0.5);
 }
 
+//右边框
+@mixin setRightLine($width:1px) {
+    content: " ";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: $width;
+    height: 100%;
+    border-right: $width solid $color-split;
+    color: #D9D9D9;
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
+}
+
 //箭头
 @mixin setArrow() {
     content: " ";
@@ -36,4 +52,9 @@
     display: inline-block;
     transform: rotate(45deg);
     border-color: #ccc #ccc transparent transparent;
+}
+
+//设置tap点击的时候透明
+@mixin tapHighlight(){
+    -webkit-tap-highlight-color: transparent;
 }
