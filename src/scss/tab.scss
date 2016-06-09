@@ -10,9 +10,11 @@
 	position: relative;
 	&:before{
 		@include setTopLine();
+		z-index:2;
 	}
 	&:after{
 		@include setBottomLine();
+		z-index:2;
 	}
 	.jinui_tab_item{
 		&:last-child{
