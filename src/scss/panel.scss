@@ -1,0 +1,95 @@
+// panel
+
+.jinui_panel{
+	position: relative;
+	background:#fff;
+	overflow: hidden;
+	&:before{
+		@include setTopLine();
+	}
+	&:after{
+		@include setBottomLine();
+	}
+
+	& + .jinui_panel{
+		margin-top: 10px;
+	}
+}
+.jinui_panel_hd{
+	padding: 10px 15px;
+    color: #999999;
+    font-size: 13px;
+    position: relative;
+    &:after{
+		@include setBottomLine();
+		left: 15px;
+	}
+}
+.jinui_panel_bd{
+	position: relative;
+    &:after{
+		@include setBottomLine();
+		left: 15px;
+	}
+}
+.jinui_lists_link{
+	.jinui_panel_ft{
+		display: block;
+		padding: 10px 15px 12px;
+	    color: $color-link;
+	    font-size: 14px;
+	    position: relative;
+		&:after{
+			@include setArrow();
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			left: inherit;
+			right: 15px;
+			margin-top: -5px;
+		}
+		&:active {
+            background-color: #ECECEC;
+        }
+	}
+}
+
+.jinui_panel_fold{
+	.jinui_panel_hd{
+		color: #4c4c4c;
+	    font-size: 16px;
+	    display: flex;
+	    align-items: center;
+	    @include tapHighlight();
+	}
+	.jinui_panel_bd{
+		padding: 10px 15px;
+		display: none;
+	}
+}
+.jinui_panel_title{
+	flex:1;
+}
+.jinui_panel_hd_ft{
+	position: relative;
+	padding: 10px;
+	&:after{
+		@include setArrow();
+		position: absolute;
+		right: 0;
+		top: 50%;
+		margin: -4px 0 0 0;
+		border-color: #7E7E7E #7E7E7E transparent transparent;
+	}
+}
+.jinui_panel_fold_open{
+	.jinui_panel_hd_ft{
+		transform:rotate(90deg);
+		&:after{
+			margin: -12px 8px 0 0;
+		}
+	}
+	.jinui_panel_bd{
+		display: block;
+	}
+}
