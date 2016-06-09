@@ -12,6 +12,7 @@
 	position: relative;
 	overflow: hidden;
 	line-height: 1.5;
+	background:$jinuiBg;
 	&:before{
 		@include setTopLine();
 	}
@@ -74,6 +75,45 @@
 		}
 	}
 }
+.jinui_lists_media{
+	.jinui_list_hd{
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+		margin-right: 10px;
+	}
+	.jinui_list_icon{
+		width: 100%;
+    	max-height: 100%;
+    	vertical-align: middle;
+	}
+	.jinui_list_bd{
+		height: 60px;
+		align-items: flex-start;
+	}
+}
+.jinui_media_title{
+	font-weight: 400;
+    font-size: 17px;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.jinui_media_desc{
+	color: #999999;
+    font-size: 13px;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
 
 .jinui_label{
 	display: inline-block;
