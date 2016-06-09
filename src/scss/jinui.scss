@@ -1,7 +1,9 @@
+
 @import "variables.scss";
 @import "mixin.scss";
 
-
+@import "font.scss";
+@import "icon_font.scss";
 
 @import "base.scss";
 
@@ -14,3 +16,5 @@
 @import "list.scss";
 
 @import "form.scss";
+
+@import "msg.scss";

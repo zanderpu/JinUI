@@ -1,0 +1,38 @@
+
+.jinui_icon_success{
+    &:before{
+        color:$color-primary;
+    }
+}
+.jinui_icon_success_circle{
+    &:before{
+        color:$color-primary;
+    }
+}
+.jinui_icon_cancel_circle{
+    &:before{
+        color:$color-danger;
+    }
+}
+.jinui_icon_cancel{
+    &:before{
+        color:$color-danger;
+    }
+}
+.jinui_icon_info{
+    &:before{
+        color:$color-info;
+    }
+}
+.jinui_icon_warn{
+    &:before{
+        color:$color-warning;
+    }
+}
+
+
+
+.jinui_icon_msg{
+	font-size: 104px;
+}
+

@@ -3,6 +3,84 @@
 * By Puter
 * https://zanderpu.github.com/JinUI
  */
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: "weui";
+  src: url("data:application/octet-stream;base64,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") format("truetype"); }
+
+[class^="jinui_icon_"] {
+  font-size: 23px;
+  line-height: 1em;
+  vertical-align: middle; }
+
+[class^="jinui_icon_"]:before, [class*=" jinui_icon_"]:before {
+  font-family: "weui";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: inherit;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  color: #9b9b9b; }
+
+.jinui_icon_success:before {
+  content: "\E600"; }
+
+/*  */
+.jinui_icon_success_circle:before {
+  content: "\E601"; }
+
+/*  */
+.jinui_icon_cancel_circle:before {
+  content: "\E602"; }
+
+/*  */
+.jinui_icon_cancel:before {
+  content: "\E603"; }
+
+/*  */
+.jinui_icon_info:before {
+  content: "\E604"; }
+
+/*  */
+.jinui_icon_warn:before {
+  content: "\E605"; }
+
+/*  */
+.jinui_icon_circle:before {
+  content: "\E606"; }
+
+/*  */
+.jinui_icon_search:before {
+  content: "\E607"; }
+
+/*  */
+.jinui_icon_success:before {
+  color: #04BE02; }
+
+.jinui_icon_success_circle:before {
+  color: #04BE02; }
+
+.jinui_icon_cancel_circle:before {
+  color: #f6383a; }
+
+.jinui_icon_cancel:before {
+  color: #f6383a; }
+
+.jinui_icon_info:before {
+  color: #0a8ddf; }
+
+.jinui_icon_warn:before {
+  color: #f60; }
+
+.jinui_icon_msg {
+  font-size: 104px; }
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
@@ -10,7 +88,7 @@ html {
 body {
   line-height: 1.6;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px; }
+  font-size: 14px; }
 
 * {
   margin: 0;
@@ -307,7 +385,8 @@ li {
 .jinui_lists {
   position: relative;
   overflow: hidden;
-  line-height: 1.5; }
+  line-height: 1.5;
+  background: #fff; }
   .jinui_lists:before {
     content: " ";
     position: absolute;
@@ -396,6 +475,45 @@ li {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   border-color: #ccc #ccc transparent transparent; }
+
+.jinui_lists_media .jinui_list_hd {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  margin-right: 10px; }
+
+.jinui_lists_media .jinui_list_icon {
+  width: 100%;
+  max-height: 100%;
+  vertical-align: middle; }
+
+.jinui_lists_media .jinui_list_bd {
+  height: 60px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+              -ms-grid-row-align: flex-start;
+          align-items: flex-start; }
+
+.jinui_media_title {
+  font-weight: 400;
+  font-size: 17px;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  word-wrap: break-word;
+  word-break: break-all; }
+
+.jinui_media_desc {
+  color: #999999;
+  font-size: 13px;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; }
 
 .jinui_label {
   display: inline-block;
@@ -660,3 +778,58 @@ li {
   left: 0;
   top: 0;
   -webkit-tap-highlight-color: transparent; }
+
+.jinui_checkbox,
+.jinui_radio {
+  opacity: 0;
+  position: absolute;
+  left: -9999px; }
+
+.jinui_check_label {
+  -webkit-tap-highlight-color: transparent; }
+
+.jinui_icon_checked {
+  margin-right: 5px; }
+
+.jinui_check_label .jinui_radio + .jinui_icon_checked:before {
+  content: "\E606";
+  color: #9b9b9b; }
+
+.jinui_check_label .jinui_radio:checked + .jinui_icon_checked:before {
+  content: "\E600";
+  color: #04BE02; }
+
+.jinui_check_label .jinui_checkbox + .jinui_icon_checked:before {
+  content: "\E606";
+  color: #9b9b9b; }
+
+.jinui_check_label .jinui_checkbox:checked + .jinui_icon_checked:before {
+  content: "\E600";
+  color: #04BE02; }
+
+.jinui_msg {
+  margin-top: 30px; }
+
+.jinui_icon_area {
+  text-align: center;
+  margin-bottom: 20px; }
+
+.jinui_text_area {
+  text-align: center; }
+
+.jinui_msg_title {
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 20px; }
+
+.jinui_msg_desc {
+  font-size: 14px;
+  color: #888; }
+
+.jinui_msg_extra {
+  text-align: center;
+  position: fixed;
+  bottom: 15px;
+  width: 100%; }
+  .jinui_msg_extra a {
+    color: #61749B; }
