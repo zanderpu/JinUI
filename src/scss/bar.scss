@@ -32,11 +32,12 @@
 
 .jinui_toolbar{
 	display: flex;
-	height: 44px;
-	line-height: 44px;
+	height: $barHeight;
+	line-height: $barHeight;
 	position: relative;
 	font-size: 16px;
 	color:$color-text;
+	align-items: center;
 	&:after{
 		@include setBottomLine();
 	}
@@ -46,7 +47,13 @@
 	[class^="jinui_icon_"]:before,
 	[class*=" jinui_icon_"]:before{
 		color:$color-text-secondary;
-		font-size: 28px;
+		margin-top: -6px;
+		text-align: left;
+	}
+	.jinui_icon{
+		display: inline-block;
+		font-size: 26px;
+		vertical-align:middle;
 	}
 	.jinui_btn{
 		display: inline-block;
@@ -60,7 +67,8 @@
 .jinui_toolbar_hd{
 	position: absolute;
 	margin-left: 10px;
-	font-size: 0;
+	height: $barHeight;
+	line-height: $barHeight;
 	.jinui_icon{
 		margin-right: 2px;
 	}
@@ -73,7 +81,6 @@
 	position: absolute;
 	right: 0;
 	margin-right: 10px;
-	font-size: 0;
 	.jinui_icon{
 		margin-left: 2px;
 	}
