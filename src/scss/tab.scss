@@ -69,3 +69,30 @@
 		}
 	}
 }
+
+.jinui_tab_nav{
+	margin:0 10px;
+	border:1px solid $color-primary;
+	border-radius: 4px;
+	color:$color-primary;
+	.jinui_tab_items{
+		&:before{
+			display: none;
+		}
+		&:after{
+			display: none;
+		}
+	}
+	.jinui_tab_item {
+		padding:6px 0;
+		&:after{
+			border-color: $color-primary;
+			transform: scaleX(1);
+		}
+	}
+
+	.jinui_tab_item_active{
+		background:$color-primary;
+		color:#fff;
+	}
+}

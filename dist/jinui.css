@@ -12,7 +12,6 @@
 [class^="jinui_icon_"] {
   font-size: 23px;
   line-height: 1em;
-  display: inline-block;
   vertical-align: middle; }
 
 [class^="jinui_icon_"]:before, [class*=" jinui_icon_"]:before {
@@ -939,6 +938,25 @@ li {
     width: 100%;
     -webkit-transform: scaleX(1);
             transform: scaleX(1); }
+
+.jinui_tab_nav {
+  margin: 0 10px;
+  border: 1px solid #04BE02;
+  border-radius: 4px;
+  color: #04BE02; }
+  .jinui_tab_nav .jinui_tab_items:before {
+    display: none; }
+  .jinui_tab_nav .jinui_tab_items:after {
+    display: none; }
+  .jinui_tab_nav .jinui_tab_item {
+    padding: 6px 0; }
+    .jinui_tab_nav .jinui_tab_item:after {
+      border-color: #04BE02;
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1); }
+  .jinui_tab_nav .jinui_tab_item_active {
+    background: #04BE02;
+    color: #fff; }
 
 .jinui_page {
   box-sizing: border-box;
