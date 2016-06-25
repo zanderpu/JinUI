@@ -176,3 +176,19 @@
 		}
 	}
 }
+
+
+.jinui_btn_warp{
+	display: flex;
+	margin-top: 10px;
+	.jinui_btn{
+		flex:1;
+		margin-left: 10px;
+		&:first-child{
+			margin:0;
+		}
+		& + .jinui_btn{
+			margin-top:0;
+		}
+	}
+}

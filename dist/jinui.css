@@ -254,6 +254,21 @@ li {
       .jinui_btn_warning.jinui_btn_line:not(.jinui_btn_disabled):active:after {
         border-color: #e65c00; }
 
+.jinui_btn_warp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px; }
+  .jinui_btn_warp .jinui_btn {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin-left: 10px; }
+    .jinui_btn_warp .jinui_btn:first-child {
+      margin: 0; }
+    .jinui_btn_warp .jinui_btn + .jinui_btn {
+      margin-top: 0; }
+
 .jinui_row {
   display: -webkit-box;
   display: -ms-flexbox;
