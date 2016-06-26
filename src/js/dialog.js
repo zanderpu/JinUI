@@ -10,11 +10,12 @@ dialog
     	btn:[],
     	background:'#fff',
     	skin:'',
+        btns:[],
     	shade:true,
-    	shadeClose:false
+    	shadeClose:false,
     };
 
-    jinui.dialog = function(options){
+    jinui.modal = function(options){
     	var opts = $.extend({},default_opts, options);
 
     	var _html = '<div class="jinui_dialog">';
@@ -41,6 +42,27 @@ dialog
 	    		$(obj).remove();
 	    	});
     	}
+    };
+
+    jinui.dialog = function(options){
+        var opts = $.extend({},default_opts, options);
+
+        var _html = '<div class="jinui_dialog jinui_dialog_confirm"><div class="jinui_mask_transparent"></div><div class="jinui_dialog_inner"><div class="jinui_dialog_hd"><strong class="jinui_dialog_title">'+ opts.title +'</strong></div><div class="jinui_dialog_bd">'+ opts.content +'</div><div class="jinui_dialog_ft"></div></div></div>';
+
+        var obj = $(_html).appendTo(document.body);
+        $(obj).addClass(opts.skin);
+
+
+        for(var i=0;i<opts.btns.length;i++){
+            opts.btns[i].style = opts.btns[i].style==='' ? 'default' : opts.btns[i].style;
+            var btnHtml = '<a href="javascript:;" class="jinui_dialog_btn '+ opts.btns[i].style +'">'+ opts.btns[i].text +'</a>';
+            var fn = opts.btns[i].handle;
+            $(btnHtml).appendTo($(obj).find('.jinui_dialog_ft')).bind('click', function(event) {
+                fn.call(this);
+            });
+        }
+
+        return obj;
     };
 
     jinui.alert = function(title,content,fn){

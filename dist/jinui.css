@@ -1652,9 +1652,10 @@ li {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  color: #04BE02;
+  color: #3d4145;
   text-decoration: none;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 0 0 3px 3px; }
   .jinui_dialog_btn:active {
     color: #A1A1A1;
     background-color: #DEDEDE; }
@@ -1669,7 +1670,8 @@ li {
   .jinui_dialog_btn.warning {
     color: #f60; }
   .jinui_dialog_btn + .jinui_dialog_btn {
-    position: relative; }
+    position: relative;
+    border-radius: 0; }
     .jinui_dialog_btn + .jinui_dialog_btn:after {
       content: " ";
       position: absolute;
@@ -1682,7 +1684,10 @@ li {
       -webkit-transform-origin: 100% 0;
       transform-origin: 100% 0;
       -webkit-transform: scaleX(0.5);
-      transform: scaleX(0.5); }
+      transform: scaleX(0.5);
+      left: -1px; }
+  .jinui_dialog_btn + .jinui_dialog_btn:last-child {
+    border-radius: 0 0 3px 0; }
 
 .jinui_dialog_alert .jinui_dialog_inner,
 .jinui_dialog_confirm .jinui_dialog_inner {

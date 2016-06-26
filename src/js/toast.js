@@ -23,7 +23,7 @@ toast
 
     	if(opts.type == 2){
     		_html = '<div class="jinui_toast"><div class="jinui_mask_transparent"></div><div class="jinui_toast_inner jinui_toast_tip"><p class="jinui_toast_content">'+ opts.content +'</p></div></div>';
-            if(opts.toptip != ''){
+            if(opts.toptip !== ''){
                 if(opts.time<2000){
                     opts.time = 2000;
                 }

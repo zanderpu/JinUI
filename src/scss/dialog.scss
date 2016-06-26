@@ -1,5 +1,7 @@
 //dialog
 
+$dialog_BorderRadius:3px;
+
 .jinui_dialog{
 	.jinui_mask_transparent{
 		background:rgba(0,0,0,.5);
@@ -14,7 +16,7 @@
     transform: translate(-50%,-50%);
     background-color: #fafafc;
     text-align: center;
-    border-radius: 3px;
+    border-radius: $dialog_BorderRadius;
 }
 
 .jinui_dialog_hd{
@@ -45,9 +47,10 @@
 .jinui_dialog_btn{
 	display: block;
     flex: 1;
-    color: $color-primary;
+    color: $color-text;
     text-decoration: none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+    border-radius: 0 0 $dialog_BorderRadius $dialog_BorderRadius;
     &:active{
         color:$jinuiBtnDefaultActiveFontColor;
         background-color:$jinuiBtnDefaultActiveBg;
@@ -70,9 +73,15 @@
     
     & + .jinui_dialog_btn{
     	position: relative;
+        border-radius: 0;
     	&:after{
     		@include setLeftLine();
+            left:-1px;
     	}
+    }
+
+    & + .jinui_dialog_btn:last-child{
+        border-radius: 0 0 $dialog_BorderRadius 0;
     }
 }
 
