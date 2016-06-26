@@ -19,7 +19,7 @@ var banner =
 
 // 语法检查
 gulp.task('jshint', function() {
-    return gulp.src('src/*.js')
+    return gulp.src('src/js/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
@@ -29,8 +29,10 @@ gulp.task('jshint', function() {
 gulp.task('minify', function() {
     return gulp.src('src/js/*.js')
         .pipe(concat('jinui.js'))
+        .pipe(header(banner))
         .pipe(gulp.dest('dist'))
         .pipe(uglify())
+        .pipe(header(banner))
         .pipe(rename('jinui.min.js'))
         .pipe(gulp.dest('dist'));
 });
@@ -43,8 +45,9 @@ gulp.task("scss", function() {
         .pipe(header(banner))
         .pipe(gulp.dest('dist'))
         .pipe(sass({outputStyle: 'compressed'}))
-        .pipe(rename('jinui.min.css'));
-        
+        .pipe(header(banner))
+        .pipe(rename('jinui.min.css'))
+        .pipe(gulp.dest('dist'));
 });
 
 // 监视文件的变化

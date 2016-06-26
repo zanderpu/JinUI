@@ -1,0 +1,87 @@
+//dialog
+
+.jinui_dialog{
+	.jinui_mask_transparent{
+		background:rgba(0,0,0,.5);
+	}
+}
+
+.jinui_dialog_inner{
+	position: fixed;
+    z-index: 13;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fafafc;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.jinui_dialog_hd{
+	 padding: 1.2em 0 .5em;
+}
+.jinui_dialog_title {
+    font-weight: 400;
+    font-size: 17px;
+}
+.jinui_dialog_bd {
+    font-size: 15px;
+    color: #888;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.jinui_dialog_ft{
+	position: relative;
+    line-height: 42px;
+    margin-top: 20px;
+    font-size: 17px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    &:before{
+    	@include setTopLine();
+    }
+}
+.jinui_dialog_btn{
+	display: block;
+    flex: 1;
+    color: $color-primary;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    &:active{
+        color:$jinuiBtnDefaultActiveFontColor;
+        background-color:$jinuiBtnDefaultActiveBg;
+    }
+    &.default{
+    	color: $color-text;
+    }
+    &.primary{
+    	color: $color-primary;
+    }
+    &.info{
+    	color: $color-info;
+    }
+    &.danger{
+    	color: $color-danger;
+    }
+    &.warning{
+    	color: $color-warning;
+    }
+    
+    & + .jinui_dialog_btn{
+    	position: relative;
+    	&:after{
+    		@include setLeftLine();
+    	}
+    }
+}
+
+.jinui_dialog_alert,
+.jinui_dialog_confirm{
+    .jinui_dialog_inner{
+        width: 85%;
+    }
+    .jinui_dialog_bd{
+        padding:0 20px;
+    }
+}

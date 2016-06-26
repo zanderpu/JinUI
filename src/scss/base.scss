@@ -33,3 +33,27 @@ ul{
 li{
 	list-style: none;
 }
+
+
+.bg_primary{
+    background:$color-primary;
+}
+.bg_info{
+    background:$color-info;
+}
+.bg_danger{
+    background:$color-danger;
+}
+.bg_warning{
+    background:$color-warning;
+}
+.bg_success{
+    background:$color-success;
+}
+.bg_primary,
+.bg_info,
+.bg_danger,
+.bg_warning,
+.bg_success{
+    color:$color-hairline;
+}
