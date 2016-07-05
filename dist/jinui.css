@@ -3,16 +3,18 @@
 * By Puter
 * https://zanderpu.github.com/JinUI
  */
+@charset "UTF-8";
 @font-face {
   font-weight: normal;
   font-style: normal;
   font-family: "jinui";
-  src: url("data:application/octet-stream;base64,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") format("truetype"); }
+  src: url("data:application/octet-stream;base64,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") format("truetype"); }
 
 [class^="jinui_icon_"] {
   font-size: 23px;
   line-height: 1em;
-  vertical-align: middle; }
+  vertical-align: middle;
+  color: #9b9b9b; }
 
 [class^="jinui_icon_"]:before, [class*=" jinui_icon_"]:before {
   font-family: "jinui";
@@ -25,8 +27,7 @@
   text-align: center;
   font-variant: normal;
   text-transform: none;
-  line-height: 1em;
-  color: #9b9b9b; }
+  line-height: 1em; }
 
 .jinui_icon_success:before {
   content: "\E600"; }
@@ -65,6 +66,9 @@
 
 .jinui_icon_success_empty:before {
   content: "\E609"; }
+
+.jinui_icon_chevron_right:before {
+  content: "\E610"; }
 
 .jinui_icon_success:before {
   color: #04BE02; }
@@ -1292,7 +1296,8 @@ li {
   width: 100%;
   height: 100%;
   top: 0;
-  left: 0; }
+  left: 0;
+  z-index: 2016; }
 
 .jinui_toast_inner {
   position: fixed;
@@ -1597,9 +1602,6 @@ li {
   100% {
     opacity: 0.895958333333333; } }
 
-.jinui_dialog .jinui_mask_transparent {
-  background: rgba(0, 0, 0, 0.5); }
-
 .jinui_dialog_inner {
   position: fixed;
   z-index: 13;
@@ -1609,7 +1611,8 @@ li {
           transform: translate(-50%, -50%);
   background-color: #fafafc;
   text-align: center;
-  border-radius: 3px; }
+  border-radius: 3px;
+  z-index: 2017; }
 
 .jinui_dialog_hd {
   padding: 1.2em 0 .5em; }
@@ -1696,3 +1699,312 @@ li {
 .jinui_dialog_alert .jinui_dialog_bd,
 .jinui_dialog_confirm .jinui_dialog_bd {
   padding: 0 20px; }
+
+/*
+日历
+ */
+.jinui_calendar_dialog {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 2017; }
+
+.jinui_calendar_hd {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  position: relative;
+  height: 42px;
+  line-height: 42px; }
+  .jinui_calendar_hd:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #d9d9d9;
+    color: #D9D9D9;
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+    -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+    z-index: 2; }
+
+.jinui_calendar_year,
+.jinui_calendar_month {
+  width: 50%;
+  text-align: center;
+  clear: both;
+  overflow: hidden; }
+
+.jinui_calendar_link {
+  font-size: 26px;
+  color: #04BE02;
+  width: 25%;
+  float: left; }
+
+.jinui_calendar_title {
+  float: left;
+  font-size: 18px;
+  display: inline-block;
+  width: 50%; }
+
+.jinui_calendar_inline .jinui_calendar_hd {
+  background: #04BE02;
+  padding: 4px 10px;
+  position: relative; }
+
+.jinui_calendar_inline .jinui_calendar_title {
+  color: #fff;
+  font-size: 13px;
+  width: auto; }
+
+.jinui_calendar_inline .jinui_calendar_year,
+.jinui_calendar_inline .jinui_calendar_month {
+  width: auto;
+  line-height: 1; }
+
+.jinui_calendar_inline .jinui_calendar_day_text {
+  font-size: 32px; }
+
+.jinui_calendar_inline .jinui_calendar_link {
+  color: #fff;
+  font-size: 32px;
+  display: block;
+  width: 32px;
+  text-align: center; }
+
+.jinui_calendar_inline .jinui_calendar_month_prev {
+  position: absolute;
+  right: 42px;
+  top: 0px; }
+
+.jinui_calendar_inline .jinui_calendar_month_next {
+  position: absolute;
+  right: 5px;
+  top: 0px; }
+
+.jinui_calendar_bd {
+  background: #fff;
+  clear: both;
+  overflow: hidden; }
+
+.jinui_calendar_warp {
+  overflow: hidden; }
+
+.jinui_calendar_inner {
+  clear: both;
+  overflow: hidden;
+  padding-bottom: 4px;
+  position: relative; }
+  .jinui_calendar_inner:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #d9d9d9;
+    color: #D9D9D9;
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+    -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+    z-index: 2; }
+
+.jinui_calendar_table {
+  float: left;
+  border-collapse: collapse; }
+  .jinui_calendar_table tbody td {
+    text-align: center;
+    padding: 4px 0;
+    font-size: 16px;
+    position: relative;
+    height: 28px; }
+    .jinui_calendar_table tbody td .jinui_calendar_day {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      border-radius: 100%; }
+  .jinui_calendar_table thead th {
+    width: 14%;
+    position: relative;
+    padding: 3px 0;
+    background: #fff; }
+    .jinui_calendar_table thead th:after {
+      content: " ";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      border-bottom: 1px solid #d9d9d9;
+      color: #D9D9D9;
+      -webkit-transform-origin: 0 100%;
+              transform-origin: 0 100%;
+      -webkit-transform: scaleY(0.5);
+              transform: scaleY(0.5);
+      z-index: 2; }
+  .jinui_calendar_table .active {
+    background: #04BE02;
+    color: #fff; }
+
+.jinui_calendar_badge {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  display: block;
+  background: #04BE02;
+  border-radius: 100%;
+  left: 50%;
+  bottom: -2px;
+  margin: 0 0 0 -3px; }
+
+.jinui_calendar_day.othermonth {
+  color: #D9D9D9; }
+
+.jinui_calendar_day.disable {
+  color: #D9D9D9; }
+
+.jinui_calendar_day.today {
+  color: #04BE02; }
+
+.jinui_calendar_info .jinui_calendar_table .active {
+  background: #0a8ddf;
+  color: #fff; }
+
+.jinui_calendar_info.jinui_calendar_inline .jinui_calendar_hd {
+  background: #0a8ddf; }
+
+.jinui_calendar_info.jinui_calendar_inline .jinui_calendar_link {
+  color: #fff; }
+
+.jinui_calendar_info .jinui_calendar_link,
+.jinui_calendar_info .today {
+  color: #0a8ddf; }
+
+.jinui_calendar_info .jinui_calendar_badge {
+  background: #0a8ddf; }
+
+.jinui_calendar_primary .jinui_calendar_table .active {
+  background: #04BE02;
+  color: #fff; }
+
+.jinui_calendar_primary.jinui_calendar_inline .jinui_calendar_hd {
+  background: #04BE02; }
+
+.jinui_calendar_primary.jinui_calendar_inline .jinui_calendar_link {
+  color: #fff; }
+
+.jinui_calendar_primary .jinui_calendar_link,
+.jinui_calendar_primary .today {
+  color: #0a8ddf; }
+
+.jinui_calendar_primary .jinui_calendar_badge {
+  background: #0a8ddf; }
+
+.jinui_calendar_success .jinui_calendar_table .active {
+  background: #4cd964;
+  color: #fff; }
+
+.jinui_calendar_success.jinui_calendar_inline .jinui_calendar_hd {
+  background: #4cd964; }
+
+.jinui_calendar_success.jinui_calendar_inline .jinui_calendar_link {
+  color: #fff; }
+
+.jinui_calendar_success .jinui_calendar_link,
+.jinui_calendar_success .today {
+  color: #4cd964; }
+
+.jinui_calendar_success .jinui_calendar_badge {
+  background: #4cd964; }
+
+.jinui_calendar_danger .jinui_calendar_table .active {
+  background: #f6383a;
+  color: #fff; }
+
+.jinui_calendar_danger.jinui_calendar_inline .jinui_calendar_hd {
+  background: #f6383a; }
+
+.jinui_calendar_danger.jinui_calendar_inline .jinui_calendar_link {
+  color: #fff; }
+
+.jinui_calendar_danger .jinui_calendar_link,
+.jinui_calendar_danger .today {
+  color: #f6383a; }
+
+.jinui_calendar_danger .jinui_calendar_badge {
+  background: #f6383a; }
+
+.jinui_calendar_warning .jinui_calendar_table .active {
+  background: #f60;
+  color: #fff; }
+
+.jinui_calendar_warning.jinui_calendar_inline .jinui_calendar_hd {
+  background: #f60; }
+
+.jinui_calendar_warning.jinui_calendar_inline .jinui_calendar_link {
+  color: #fff; }
+
+.jinui_calendar_warning .jinui_calendar_link,
+.jinui_calendar_warning .today {
+  color: #f60; }
+
+.jinui_calendar_warning .jinui_calendar_badge {
+  background: #f60; }
+
+.jinui_calendar_animation_open {
+  -webkit-animation: fadeInUpBig .3s 0s ease both;
+          animation: fadeInUpBig .3s 0s ease both; }
+
+@-webkit-keyframes fadeInUpBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes fadeInUpBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+.jinui_calendar_animation_close {
+  -webkit-animation: fadeOutDownBig .3s 0s ease both;
+          animation: fadeOutDownBig .3s 0s ease both; }
+
+@-webkit-keyframes fadeOutDownBig {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px); } }
+
+@keyframes fadeOutDownBig {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px); } }

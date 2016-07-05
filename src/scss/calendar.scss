@@ -1,0 +1,299 @@
+/*
+日历
+ */
+
+.jinui_calendar{
+
+}
+
+.jinui_calendar_dialog{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: $zindex+1;
+}
+
+.jinui_calendar_hd{
+	display: flex;
+	line-height: 1;
+	align-items:center;
+	background:#fff;
+	position: relative;
+	height: 42px;
+	line-height: 42px;
+	&:after{
+		@include setBottomLine();
+	}
+}
+.jinui_calendar_year,
+.jinui_calendar_month{
+	width: 50%;
+	text-align: center;
+	clear: both;
+	overflow: hidden;
+}
+.jinui_calendar_link{
+	font-size: 26px;
+	color:$color-primary;
+	width: 25%;
+	float: left;
+}
+.jinui_calendar_title{
+	float: left;
+	font-size: 18px;
+	display: inline-block;
+	width: 50%;
+}
+
+//内联样式
+.jinui_calendar_inline{
+	.jinui_calendar_hd{
+		background:$color-primary;
+		padding:4px 10px;
+		position: relative;
+	}
+	.jinui_calendar_title{
+		color:#fff;
+		font-size: 13px;
+		width: auto;
+	}
+	.jinui_calendar_year,
+	.jinui_calendar_month{
+		width: auto;
+		line-height: 1;
+	}
+
+	.jinui_calendar_day_text{
+		font-size: 32px;
+	}
+
+	.jinui_calendar_link{
+		color:#fff;
+		font-size: 32px;
+		display: block;
+		width: 32px;
+		text-align: center;
+	}
+	.jinui_calendar_month_prev{
+		position: absolute;
+		right: 42px;
+		top: 0px;
+	}
+	.jinui_calendar_month_next{
+		position: absolute;
+		right: 5px;
+		top:0px;
+	}
+}
+
+.jinui_calendar_bd{
+	background:#fff;
+	clear: both;
+	overflow: hidden;
+}
+.jinui_calendar_warp{
+	overflow: hidden;
+}
+.jinui_calendar_inner{
+	clear: both;
+	overflow: hidden;
+	padding-bottom: 4px;
+	position: relative;
+	&:after{
+		@include setBottomLine();
+	}
+}
+.jinui_calendar_table{
+	float: left;
+	border-collapse: collapse;
+	
+	tbody td {
+	    text-align: center;
+	    padding: 4px 0;
+	    font-size: 16px;
+	    position: relative;
+	    height: 28px;
+	    .jinui_calendar_day {
+		    display: inline-block;
+		    width: 24px;
+		    height: 24px;
+		    line-height: 24px;
+		    border-radius: 100%;
+		}
+	}
+	thead th{
+		width: 14%;
+		position: relative;
+	    &:after{
+			@include setBottomLine();
+		}
+	    padding: 3px 0;
+	    background:#fff;
+	}
+	.active{
+		background: $color-primary;
+    	color: #fff;
+	}
+}
+
+
+.jinui_calendar_badge{
+	position: absolute;
+	width: 6px;
+	height: 6px;
+	display: block;
+	background:$color-primary;
+	border-radius: 100%;
+	left: 50%;
+	bottom: -2px;
+	margin:0 0 0 -3px;
+}
+
+.jinui_calendar_day{
+	&.othermonth{
+		color:$color-hairline;
+	}
+	&.disable{
+		color:$color-hairline;
+	}
+	&.today{
+		color:$color-primary;
+	}
+}
+
+
+//弹出框选择日历
+
+
+//主题
+.jinui_calendar_info{
+	.jinui_calendar_table{
+		.active{
+			background: $color-info;
+	    	color: #fff;
+		}
+	}
+	&.jinui_calendar_inline{
+		.jinui_calendar_hd{
+			background: $color-info;
+		}
+		.jinui_calendar_link{
+			color:#fff;
+		}
+	}
+	.jinui_calendar_link,
+	.today{
+		color:$color-info;
+	}
+	.jinui_calendar_badge{
+		background:$color-info;
+	}
+}
+.jinui_calendar_primary{
+	.jinui_calendar_table{
+		.active{
+			background: $color-primary;
+	    	color: #fff;
+		}
+	}
+	&.jinui_calendar_inline{
+		.jinui_calendar_hd{
+			background: $color-primary;
+		}
+		.jinui_calendar_link{
+			color:#fff;
+		}
+	}
+	.jinui_calendar_link,
+	.today{
+		color:$color-info;
+	}
+	.jinui_calendar_badge{
+		background:$color-info;
+	}
+}
+.jinui_calendar_success{
+	.jinui_calendar_table{
+		.active{
+			background: $color-success;
+	    	color: #fff;
+		}
+	}
+	&.jinui_calendar_inline{
+		.jinui_calendar_hd{
+			background: $color-success;
+		}
+		.jinui_calendar_link{
+			color:#fff;
+		}
+	}
+	.jinui_calendar_link,
+	.today{
+		color:$color-success;
+	}
+	.jinui_calendar_badge{
+		background:$color-success;
+	}
+}
+.jinui_calendar_danger{
+	.jinui_calendar_table{
+		.active{
+			background: $color-danger;
+	    	color: #fff;
+		}
+	}
+	&.jinui_calendar_inline{
+		.jinui_calendar_hd{
+			background: $color-danger;
+		}
+		.jinui_calendar_link{
+			color:#fff;
+		}
+	}
+	.jinui_calendar_link,
+	.today{
+		color:$color-danger;
+	}
+	.jinui_calendar_badge{
+		background:$color-danger;
+	}
+}
+.jinui_calendar_warning{
+	.jinui_calendar_table{
+		.active{
+			background: $color-warning;
+	    	color: #fff;
+		}
+	}
+	&.jinui_calendar_inline{
+		.jinui_calendar_hd{
+			background: $color-warning;
+		}
+		.jinui_calendar_link{
+			color:#fff;
+		}
+	}
+	.jinui_calendar_link,
+	.today{
+		color:$color-warning;
+	}
+	.jinui_calendar_badge{
+		background:$color-warning;
+	}
+}
+
+//动画
+.jinui_calendar_animation_open{
+	animation:fadeInUpBig .3s 0s ease both;
+}
+@keyframes fadeInUpBig{
+	0%{opacity:0;transform:translateY(400px)}
+	100%{opacity:1;transform:translateY(0)}
+}
+.jinui_calendar_animation_close{
+	animation:fadeOutDownBig .3s 0s ease both;
+}
+@keyframes fadeOutDownBig{
+	0%{opacity:1;transform:translateY(0)}
+	100%{opacity:0;transform:translateY(400px)}
+}

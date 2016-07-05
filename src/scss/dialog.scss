@@ -3,9 +3,6 @@
 $dialog_BorderRadius:3px;
 
 .jinui_dialog{
-	.jinui_mask_transparent{
-		background:rgba(0,0,0,.5);
-	}
 }
 
 .jinui_dialog_inner{
@@ -17,6 +14,7 @@ $dialog_BorderRadius:3px;
     background-color: #fafafc;
     text-align: center;
     border-radius: $dialog_BorderRadius;
+    z-index: $zindex+1;
 }
 
 .jinui_dialog_hd{

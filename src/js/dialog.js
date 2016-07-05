@@ -21,7 +21,7 @@ dialog
     	var _html = '<div class="jinui_dialog">';
 
     	if(opts.shade){
-    		_html += '<div class="jinui_mask_transparent"></div>';
+    		_html += '<div class="jinui_mask"></div>';
     	}
 
     	_html += '<div class="jinui_dialog_inner"><div class="jinui_dialog_bd">'+ opts.content +'</div></div></div>';
@@ -38,7 +38,7 @@ dialog
     	});
 
     	if(opts.shadeClose){
-    		$(obj).delegate('.jinui_mask_transparent', 'click', function(event) {
+    		$(obj).delegate('.jinui_mask', 'click', function(event) {
 	    		$(obj).remove();
 	    	});
     	}
@@ -47,7 +47,7 @@ dialog
     jinui.dialog = function(options){
         var opts = $.extend({},default_opts, options);
 
-        var _html = '<div class="jinui_dialog jinui_dialog_confirm"><div class="jinui_mask_transparent"></div><div class="jinui_dialog_inner"><div class="jinui_dialog_hd"><strong class="jinui_dialog_title">'+ opts.title +'</strong></div><div class="jinui_dialog_bd">'+ opts.content +'</div><div class="jinui_dialog_ft"></div></div></div>';
+        var _html = '<div class="jinui_dialog jinui_dialog_confirm"><div class="jinui_mask"></div><div class="jinui_dialog_inner"><div class="jinui_dialog_hd"><strong class="jinui_dialog_title">'+ opts.title +'</strong></div><div class="jinui_dialog_bd">'+ opts.content +'</div><div class="jinui_dialog_ft"></div></div></div>';
 
         var obj = $(_html).appendTo(document.body);
         $(obj).addClass(opts.skin);
@@ -66,7 +66,7 @@ dialog
     };
 
     jinui.alert = function(title,content,fn){
-    	var _html = '<div class="jinui_dialog jinui_dialog_alert"><div class="jinui_mask_transparent"></div><div class="jinui_dialog_inner"><div class="jinui_dialog_hd"><strong class="jinui_dialog_title">'+ title +'</strong></div><div class="jinui_dialog_bd">'+ content +'</div><div class="jinui_dialog_ft"><a href="javascript:;" class="jinui_dialog_btn primary">确定</a></div></div></div>';
+    	var _html = '<div class="jinui_dialog jinui_dialog_alert"><div class="jinui_mask"></div><div class="jinui_dialog_inner"><div class="jinui_dialog_hd"><strong class="jinui_dialog_title">'+ title +'</strong></div><div class="jinui_dialog_bd">'+ content +'</div><div class="jinui_dialog_ft"><a href="javascript:;" class="jinui_dialog_btn primary">确定</a></div></div></div>';
 
     	var obj = $(_html).appendTo(document.body);
     	$(obj).delegate('.jinui_dialog_btn.primary', 'click', function(event) {
@@ -77,7 +77,7 @@ dialog
     };
 
     jinui.confirm = function(title,content,fn){
-    	var _html = '<div class="jinui_dialog jinui_dialog_confirm"><div class="jinui_mask_transparent"></div><div class="jinui_dialog_inner"><div class="jinui_dialog_hd"><strong class="jinui_dialog_title">'+ title +'</strong></div><div class="jinui_dialog_bd">'+ content +'</div><div class="jinui_dialog_ft"><a href="javascript:;" class="jinui_dialog_btn default">取消</a><a href="javascript:;" class="jinui_dialog_btn primary">确定</a></div></div></div>';
+    	var _html = '<div class="jinui_dialog jinui_dialog_confirm"><div class="jinui_mask"></div><div class="jinui_dialog_inner"><div class="jinui_dialog_hd"><strong class="jinui_dialog_title">'+ title +'</strong></div><div class="jinui_dialog_bd">'+ content +'</div><div class="jinui_dialog_ft"><a href="javascript:;" class="jinui_dialog_btn default">取消</a><a href="javascript:;" class="jinui_dialog_btn primary">确定</a></div></div></div>';
 
     	var obj = $(_html).appendTo(document.body);
     	$(obj).delegate('.jinui_dialog_btn.primary', 'click', function(event) {

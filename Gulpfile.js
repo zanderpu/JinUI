@@ -27,7 +27,7 @@ gulp.task('jshint', function() {
 
 // 合并文件之后压缩代码
 gulp.task('minify', function() {
-    return gulp.src('src/js/*.js')
+    return gulp.src(['src/libs/fastclick.js','src/js/*.js'])
         .pipe(concat('jinui.js'))
         .pipe(header(banner))
         .pipe(gulp.dest('dist'))

@@ -839,3 +839,9 @@
 		window.FastClick = FastClick;
 	}
 }());
+
+;(function(){}(
+	window.onload = function(){
+		new FastClick(document.body);
+	}
+));
