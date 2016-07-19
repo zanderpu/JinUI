@@ -1,0 +1,86 @@
+$picker-hd-bg:#f7f7f8;
+$picker-bd-bg:#EFEFF4;
+
+$picker-item-height:34px;
+
+.jinui_picker{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background:$picker-bd-bg;
+}
+
+.jinui_picker_hd{
+	position: relative;
+	height: 40px;
+	line-height: 40px;
+	background:$picker-hd-bg;
+	&:before{
+		@include setTopLine();
+	}
+}
+.jinui_picker_title{
+	font-size: 18px;
+	text-align: center;
+	font-weight: normal;
+}
+.jinui_picker_btn{
+	position: absolute;
+	top: 0;
+	right: 10px;
+	height: 40px;
+	line-height: 40px;
+	color:$color-primary;
+	font-size: 18px;
+
+}
+
+.jinui_picker_bd{
+	position: relative;
+	-webkit-mask-box-image: -webkit-linear-gradient(bottom, transparent, transparent 5%, white 20%, white 80%, transparent 95%, transparent);
+    -webkit-mask-box-image: linear-gradient(to top, transparent, transparent 5%, white 20%, white 80%, transparent 95%, transparent);
+}
+.jinui_picker_cols{
+	height: $picker-item-height*7;
+	display: flex;
+	flex-wrap:nowrap;
+	justify-content:center;
+}
+.jinui_picker_col{
+	text-align: center;
+	overflow: hidden;
+	max-height: 100%;
+	align-items:stretch;
+}
+.jinui_picker_highlight{
+	position: absolute;
+	box-sizing: border-box;
+	height: $picker-item-height;
+	width: 100%;
+	top: 50%;
+	left: 0;
+	margin-top: -1*$picker-item-height/2;
+	pointer-events: none;
+	&:before{
+		@include setTopLine();
+	}
+	&:after{
+		@include setBottomLine();
+	}
+}
+.jinui_picker_items{
+	transform: translate3d(0px, 102px, 0px);
+	transition: 300ms;
+}
+.jinui_picker_item{
+	height: $picker-item-height;
+	line-height: $picker-item-height;
+	color:$color-text-gray;
+	padding: 0 10px;
+	font-size: 1.2rem;
+	transition: 300ms;
+	&.jinui_picker_selected{
+		color:#000;
+	}
+}

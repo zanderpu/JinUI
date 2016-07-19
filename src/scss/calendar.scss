@@ -283,14 +283,14 @@
 }
 
 //动画
-.jinui_calendar_animation_open{
+.jinui_animation_open{
 	animation:fadeInUpBig .3s 0s ease both;
 }
 @keyframes fadeInUpBig{
 	0%{opacity:0;transform:translateY(400px)}
 	100%{opacity:1;transform:translateY(0)}
 }
-.jinui_calendar_animation_close{
+.jinui_animation_close{
 	animation:fadeOutDownBig .3s 0s ease both;
 }
 @keyframes fadeOutDownBig{

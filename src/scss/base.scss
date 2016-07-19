@@ -10,7 +10,7 @@ html {
 body {
     line-height: 1.6;
     font-family: $sansFont;
-    font-size: 14px;
+    font-size: $globalFontSize;
 }
 
 * {

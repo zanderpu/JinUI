@@ -396,7 +396,7 @@ calendar
         };
 
         c.close = function(){
-            $(c.container).find('.jinui_calendar_dialog').removeClass('jinui_calendar_animation_open').addClass('jinui_calendar_animation_close');
+            $(c.container).find('.jinui_calendar_dialog').removeClass('jinui_animation_open').addClass('jinui_animation_close');
             setTimeout(function(){
                 $(c.container).hide();
             },200)
@@ -410,7 +410,7 @@ calendar
             }else{
                 setDate(new Date());
             }
-            $(c.container).find('.jinui_calendar_dialog').removeClass('jinui_calendar_animation_close').addClass('jinui_calendar_animation_open');
+            $(c.container).find('.jinui_calendar_dialog').removeClass('jinui_animation_close').addClass('jinui_animation_open');
         };
 
         c.setDay = function(date){//选中天

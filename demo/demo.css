@@ -31,7 +31,8 @@ body {
     border-top: 0; }
   .demo_grid a {
     display: block;
-    color: #000; }
+    color: #000;
+    font-size: 14px; }
 
 .customize {
   background: #3D6265; }
