@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+	<title>Swiper</title>
+	<link rel="stylesheet" href="../../dist/jinui.css">
+	<link rel="stylesheet" href="../demo.css">
+</head>
+<body ontouchstart>
+	
+    <h1 class="page_title">Swiper</h1>
+    <div id="swiper" class="jinui_swiper">
+        <div class="jinui_swiper_container">
+            <div class="jinui_swiper_slide">
+                <a href="">
+                    <img src="../images/banner1.png" width="100%" alt="">
+                </a>
+            </div>
+            <div class="jinui_swiper_slide">
+                <img src="../images/banner2.png" width="100%" alt="">
+            </div>
+            <div class="jinui_swiper_slide">
+                <img src="../images/banner3.png" width="100%" alt="">
+            </div>
+            <div class="jinui_swiper_slide">
+                <img src="../images/banner4.png" width="100%" alt="">
+            </div>
+        </div>
+    </div>
+    
+    <div class="content">
+        <a href="javascript:;" class="jinui_btn jinui_btn_defalut" id="go">跳转到2</a>
+    </div>
+    
+    <div class="jinui_list_title">
+        文字滚动
+    </div>
+    <div class="content">
+        <div id="swipervertical" class="jinui_swiper">
+            <div class="jinui_swiper_container">
+                <div class="jinui_swiper_slide">
+                    <a href="">1这是本世纪最大的新闻</a>
+                </div>
+                <div class="jinui_swiper_slide">
+                    <a href="">2英国脱欧，是闹剧，是阴谋……</a>
+                </div>
+                <div class="jinui_swiper_slide">
+                    <a href="">3多数城市变成汪洋大海，且看如何坐船</a>
+                </div>
+                <div class="jinui_swiper_slide">
+                    <a href="">4新闻链接……</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="jinui_list_title">
+        垂直全屏滚动
+    </div>
+    <div class="jinui_lists jinui_lists_link">
+        <a class="jinui_list" href="swiper2.html">
+            <div class="jinui_list_bd">垂直滑动</div>
+            <div class="jinui_list_ft"></div>
+        </a>
+    </div>
+
+    <div style="margin-bottom:50px;"></div>
+    
+
+
+    <script src="../../src/libs/zepto.min.js"></script>
+    <script src="../../dist/jinui.js"></script>
+    <script>
+    $(function(){
+
+        var s = $('#swiper').swiper({
+            loop:true,
+            auto:true,
+            pagination:true,
+            onChange:function(i){
+                //console.log(i);
+            }
+        });
+
+        $('#go').click(function(event) {
+            s.swiper('go',2);
+        });
+
+
+        $('#swipervertical').swiper({
+            loop:true,
+            auto:true,
+            slide:false,
+            autotime:3000,
+            orientation:'vertical',
+            pagination:false,
+            onChange:function(i){
+                //console.log(i);
+            }
+        });
+
+
+
+        
+    })
+    </script>
+</body>
+</html>

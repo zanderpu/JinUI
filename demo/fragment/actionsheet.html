@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+	<title>Action Sheet</title>
+	<link rel="stylesheet" href="../../dist/jinui.css">
+	<link rel="stylesheet" href="../demo.css">
+</head>
+<body ontouchstart>
+	<h1 class="page_title">Action Sheet</h1>
+	
+	<div class="content">
+		<a href="javascript:;" class="jinui_btn jinui_btn_primary" id="actionsheet">ActionSheet</a>
+	</div>
+	<div class="jinui_actionsheet" style="display:none;">
+        <div class="jinui_mask jinui_mask_animation"></div>
+        <div class="jinui_actionsheet_content">
+			<div class="jinui_actionsheet_cell jinui_actionsheet_title">
+				<!-- <h3>你确定要退出吗？</h3> -->
+				<p>退出后将不能接收新消息</p>
+			</div>
+			<div class="jinui_actionsheet_menu">
+				<div class="jinui_actionsheet_cell" style="color:#f00;">
+					选项一
+				</div>
+				<div class="jinui_actionsheet_cell" style="color:#4BC113;">
+					选项二
+				</div>
+				<div class="jinui_actionsheet_cell" style="color:#000;">
+					<a href="">选项三</a>
+				</div>
+			</div>
+			<div class="jinui_actionsheet_cell jinui_actionsheet_action">
+				取消
+			</div>
+        </div>
+    </div>
+
+    <script src="../../src/libs/zepto.min.js"></script>
+    <script src="../../dist/jinui.js"></script>
+    <script>
+    $(function(){
+    	$('#actionsheet').click(function(event) {
+
+    		jinui.actionsheet({
+    			title:'',
+    			actions:[{
+    				text:'选项一',
+    				className:'error',
+    				handle:function(){
+    					alert(1);
+    				}
+    			},{
+    				text:'选项2',
+    				className:'error',
+    				handle:function(){
+    					alert(2);
+    				}
+    			}]
+    		})
+
+    	});
+    })
+    </script>
+</body>
+</html>

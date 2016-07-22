@@ -287,7 +287,7 @@
 	animation:fadeInUpBig .3s 0s ease both;
 }
 @keyframes fadeInUpBig{
-	0%{opacity:0;transform:translateY(400px)}
+	0%{opacity:0;transform:translateY(500px)}
 	100%{opacity:1;transform:translateY(0)}
 }
 .jinui_animation_close{
@@ -295,5 +295,5 @@
 }
 @keyframes fadeOutDownBig{
 	0%{opacity:1;transform:translateY(0)}
-	100%{opacity:0;transform:translateY(400px)}
+	100%{opacity:0;transform:translateY(500px)}
 }

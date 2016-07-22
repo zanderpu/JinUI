@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+	<title>Picker</title>
+	<link rel="stylesheet" href="../../dist/jinui.css">
+	<link rel="stylesheet" href="../demo.css">
+</head>
+<body ontouchstart>
+	<h1 class="page_title">Picker</h1>
+
+	<ul class="jinui_lists">
+		<li class="jinui_list">
+			<div class="jinui_list_hd">
+				<label class="jinui_label">姓名</label>
+			</div>
+			<div class="jinui_list_bd"><input type="text" class="jinui_input username" placeholder="选择姓名" value=""></div>
+		</li>
+		<li class="jinui_list">
+			<div class="jinui_list_hd">
+				<label class="jinui_label">地址</label>
+			</div>
+			<div class="jinui_list_bd"><input type="text" class="jinui_input address" placeholder="选择居住地址" readonly></div>
+		</li>
+	</ul>
+	
+	<div class="content">
+		<a href="javascript:;" class="jinui_btn jinui_btn_default" id="picker_getvalue">获取设置值</a>
+	</div>
+	<script src="../../src/libs/zepto.min.js"></script>
+    <script src="../../dist/jinui.js"></script>
+    <script>
+    $(function() {
+
+    	var p = $('.username').picker({
+    		title:'',
+    		cols:[[{
+				text:'赵',
+				value:'zhao'
+			},{
+				text:'钱',
+				value:'qian'
+			},{
+				text:'孙',
+				value:'sun'
+			}],[{
+				text:'三',
+				value:'zhao'
+			},{
+				text:'我的名字',
+				value:'qian'
+			},{
+				text:'五',
+				value:'sun'
+			}]],
+			onChange:function(picker,texts,values){
+				console.log(picker);
+				// picker.params.cols[1] = [{
+				// 	text:'北京'
+				// },{
+				// 	text:'上海'
+				// },{
+				// 	text:'广州'
+				// }]
+				// picker.updateCols();
+				//console.log(texts,values);
+			},
+			onClose:function(texts){
+				//console.log(texts);
+			}
+    	});
+
+
+    	$('#picker_getvalue').click(function(event) {
+    		var a = p.picker('getValue');
+    		console.log(a);
+
+
+    		p.picker('setValue','孙 五');
+    	});
+
+    	
+
+    	$('.address').picker({
+    		title:'你居住的地方？',
+    		cols:[[{
+				text:'北京'
+			},{
+				text:'上海'
+			},{
+				text:'广州'
+			}]]
+    	});
+
+
+    })
+    </script>
+</body>
+</html>

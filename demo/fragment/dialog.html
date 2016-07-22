@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Dialog</title>
+    <link rel="stylesheet" href="../../dist/jinui.css">
+    <link rel="stylesheet" href="../demo.css">
+</head>
+
+<body ontouchstart>
+    <h1 class="page_title">Dialog</h1>
+    <div class="content">
+        <a href="javascript:;" class="jinui_btn jinui_btn_default" id="alert">alert</a>
+        <a href="javascript:;" class="jinui_btn jinui_btn_default" id="confirm">confirm</a>
+        <a href="javascript:;" class="jinui_btn jinui_btn_default" id="dialog">dialog</a>
+        <a href="javascript:;" class="jinui_btn jinui_btn_default" id="modal">modal</a>
+    </div>
+
+
+    <div class="jinui_dialog jinui_dialog_alert" id="jinui_dialog_alert" style="display:none;">
+        <div class="jinui_mask"></div>
+        <div class="jinui_dialog_inner">
+            <div class="jinui_dialog_hd"><strong class="jinui_dialog_title">提示</strong></div>
+            <div class="jinui_dialog_bd">保存成功</div>
+            <div class="jinui_dialog_ft">
+            	<a href="javascript:;" class="jinui_dialog_btn primary">确定</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="jinui_dialog jinui_dialog_confirm" id="jinui_dialog_confirm" style="display:none;">
+        <div class="jinui_mask"></div>
+        <div class="jinui_dialog_inner">
+            <div class="jinui_dialog_hd"><strong class="jinui_dialog_title">提示</strong></div>
+            <div class="jinui_dialog_bd">你确定要发送吗？</div>
+            <div class="jinui_dialog_ft">
+            	<a href="javascript:;" class="jinui_dialog_btn primary">发送</a>
+            	<a href="javascript:;" class="jinui_dialog_btn info">不发送</a>
+            	<a href="javascript:;" class="jinui_dialog_btn danger">取消</a>
+            	<a href="javascript:;" class="jinui_dialog_btn warning">警告</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="jinui_dialog" id="" style="display:none;">
+        <div class="jinui_mask"></div>
+        <div class="jinui_dialog_inner">
+            <div class="jinui_dialog_bd">dialog只有内容</div>
+        </div>
+    </div>
+
+    <div class="test" style="display:none;">
+        <p style="color:#fff;">dialog自定义内容</p>
+        <a href="javascript:;" class="jinui_btn jinui_btn_default" jinui-dialog-btn="close">关闭</a>
+    </div>
+
+    <script src="../../src/libs/zepto.min.js"></script>
+    <script src="../../dist/jinui.js"></script>
+    <script>
+    $(function() {
+
+        $('#alert').on('click', function(event) {
+            jinui.alert('','这是一个alert',function(){
+                alert(1);
+            });
+
+        });
+
+        $('#confirm').on('click', function(event) {
+            jinui.confirm('提示','你确定要提交吗？',function(result){
+                console.log(result);
+            });
+
+        });
+
+        $('#dialog').on('click', function(event) {
+            // jinui.dialog({
+            //     content:$('.test').html(),
+            //     background:'none',
+            //     skin:'',
+            //     shade:true,
+            //     shadeClose:true
+            // });
+
+            var index = jinui.dialog({
+                title:'提示',
+                content:'你确定要发送吗？',
+                skin:'',
+                btns:[{
+                    text:'发送',
+                    style:'primary',
+                    handle:function(){
+                        jinui.close(index);
+                    }
+                },{
+                    text:'不发送',
+                    style:'danger',
+                    handle:function(){
+                        jinui.close(index);
+                    }
+                },{
+                    text:'取消',
+                    style:'',
+                    handle:function(){
+                        jinui.close(index);
+                    }
+                }]
+            });
+
+
+        });
+
+        $('#modal').on('click', function(event) {
+            jinui.modal({
+                content:$('.test').html(),
+                background:'none',
+                skin:'',
+                shade:true,
+                shadeClose:true
+            });
+
+
+
+        });
+
+        
+    })
+    </script>
+</body>
+
+</html>

@@ -1291,6 +1291,16 @@ li {
   background: rgba(0, 0, 0, 0.6);
   z-index: 100; }
 
+.jinui_mask_animation {
+  opacity: 0;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  visibility: hidden; }
+
+.jinui_mask_visible {
+  opacity: 1;
+  visibility: visible; }
+
 .jinui_mask_transparent {
   position: fixed;
   width: 100%;
@@ -1968,8 +1978,8 @@ li {
 @-webkit-keyframes fadeInUpBig {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(400px);
-            transform: translateY(400px); }
+    -webkit-transform: translateY(500px);
+            transform: translateY(500px); }
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -1978,8 +1988,8 @@ li {
 @keyframes fadeInUpBig {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(400px);
-            transform: translateY(400px); }
+    -webkit-transform: translateY(500px);
+            transform: translateY(500px); }
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -1996,8 +2006,8 @@ li {
             transform: translateY(0); }
   100% {
     opacity: 0;
-    -webkit-transform: translateY(400px);
-            transform: translateY(400px); } }
+    -webkit-transform: translateY(500px);
+            transform: translateY(500px); } }
 
 @keyframes fadeOutDownBig {
   0% {
@@ -2006,8 +2016,8 @@ li {
             transform: translateY(0); }
   100% {
     opacity: 0;
-    -webkit-transform: translateY(400px);
-            transform: translateY(400px); } }
+    -webkit-transform: translateY(500px);
+            transform: translateY(500px); } }
 
 .jinui_picker {
   position: fixed;
@@ -2129,3 +2139,202 @@ li {
   transition: 300ms; }
   .jinui_picker_item.jinui_picker_selected {
     color: #000; }
+
+.jinui_actionsheet_content {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #EFEFF4;
+  z-index: 2017; }
+
+.jinui_actionsheet_cell {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  position: relative; }
+  .jinui_actionsheet_cell:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #d9d9d9;
+    color: #D9D9D9;
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+    -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+    z-index: 2; }
+  .jinui_actionsheet_cell:last-child:after {
+    display: none; }
+  .jinui_actionsheet_cell > a {
+    display: block;
+    color: #000; }
+
+.jinui_actionsheet_title {
+  color: #9b9b9b;
+  font-size: 14px;
+  padding: 16px 0; }
+
+.jinui_actionsheet_cancel {
+  margin-top: 6px; }
+
+.jinui_swiper {
+  width: 100%;
+  overflow: hidden;
+  position: relative; }
+
+.jinui_swiper_container {
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms; }
+  .jinui_swiper_container:after {
+    display: block;
+    content: '';
+    clear: both;
+    overflow: hidden; }
+
+.jinui_swiper_slide img {
+  vertical-align: top; }
+
+.jinui_swiper_pagination {
+  position: absolute;
+  bottom: 10px;
+  right: 10px; }
+  .jinui_swiper_pagination:after {
+    display: block;
+    content: '';
+    clear: both;
+    overflow: hidden; }
+
+.jinui_swiper_page {
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  float: left;
+  margin-left: 5px;
+  background: rgba(0, 0, 0, 0.5); }
+  .jinui_swiper_page.active {
+    background: #04BE02; }
+
+.jinui_swiper_lefttop {
+  top: 10px;
+  left: 10px;
+  bottom: inherit;
+  right: inherit;
+  width: 7px; }
+  .jinui_swiper_lefttop .jinui_swiper_page {
+    float: none;
+    margin: 0 0 5px 0; }
+
+.jinui_swiper_leftcenter {
+  top: 50%;
+  left: 10px;
+  bottom: inherit;
+  right: inherit;
+  width: 7px; }
+  .jinui_swiper_leftcenter .jinui_swiper_page {
+    float: none;
+    margin: 0 0 5px 0; }
+
+.jinui_swiper_leftbottom {
+  top: inherit;
+  left: 10px;
+  bottom: 10px;
+  right: inherit;
+  width: 7px; }
+  .jinui_swiper_leftbottom .jinui_swiper_page {
+    float: none;
+    margin: 0 0 5px 0; }
+
+.jinui_swiper_righttop {
+  top: 10px;
+  left: inherit;
+  bottom: inherit;
+  right: 10px;
+  width: 7px; }
+  .jinui_swiper_righttop .jinui_swiper_page {
+    float: none;
+    margin: 0 0 5px 0; }
+
+.jinui_swiper_rightcenter {
+  top: 50%;
+  left: inherit;
+  bottom: inherit;
+  right: 10px;
+  width: 7px; }
+  .jinui_swiper_rightcenter .jinui_swiper_page {
+    float: none;
+    margin: 0 0 5px 0; }
+
+.jinui_swiper_rightbottom {
+  top: inherit;
+  left: inherit;
+  bottom: 10px;
+  right: 10px;
+  width: 7px; }
+  .jinui_swiper_rightbottom .jinui_swiper_page {
+    float: none;
+    margin: 0 0 5px 0; }
+
+.jinui_swiper_topleft {
+  top: 10px;
+  left: 10px;
+  bottom: inherit;
+  right: inherit;
+  width: auto; }
+  .jinui_swiper_topleft .jinui_swiper_page {
+    float: left;
+    margin: 0 5px 0 0; }
+
+.jinui_swiper_topcenter {
+  top: 10px;
+  left: 50%;
+  bottom: inherit;
+  right: inherit;
+  width: auto; }
+  .jinui_swiper_topcenter .jinui_swiper_page {
+    float: left;
+    margin: 0 5px 0 0; }
+
+.jinui_swiper_topright {
+  top: 10px;
+  left: inherit;
+  bottom: inherit;
+  right: 10px;
+  width: auto; }
+  .jinui_swiper_topright .jinui_swiper_page {
+    float: left;
+    margin: 0 5px 0 0; }
+
+.jinui_swiper_bottomleft {
+  top: inherit;
+  left: 10px;
+  bottom: 10px;
+  right: inherit;
+  width: auto; }
+  .jinui_swiper_bottomleft .jinui_swiper_page {
+    float: left;
+    margin: 0 5px 0 0; }
+
+.jinui_swiper_bottomcenter {
+  top: inherit;
+  left: 50%;
+  bottom: 10px;
+  right: inherit;
+  width: auto; }
+  .jinui_swiper_bottomcenter .jinui_swiper_page {
+    float: left;
+    margin: 0 5px 0 0; }
+
+.jinui_swiper_bottomright {
+  top: inherit;
+  left: inherit;
+  bottom: 10px;
+  right: 10px;
+  width: auto; }
+  .jinui_swiper_bottomright .jinui_swiper_page {
+    float: left;
+    margin: 0 5px 0 0; }

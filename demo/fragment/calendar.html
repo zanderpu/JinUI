@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <title>calendar</title>
+    <link rel="stylesheet" href="../../dist/jinui.css">
+    <link rel="stylesheet" href="../demo.css">
+</head>
+
+<body ontouchstart>
+
+
+    <h1 class="page_title">日历</h1>
+    <div class="jinui_list_title">
+        内联日历
+    </div>
+    <div class="calendar"></div>
+    <div class="calendar2"></div>
+    
+    
+    <div class="jinui_lists">
+        <li class="jinui_list">
+            <div class="jinui_list_hd">
+                <label class="jinui_label">开始日期</label>
+            </div>
+            <div class="jinui_list_bd"><input type="text" class="select_calendar jinui_input"  placeholder="请选择日期"></div>
+        </li>
+        <div class="jinui_list">
+            <div class="jinui_list_bd">
+                <input type="text" class="select_calendar jinui_input" value="2016-3-04" placeholder="请选择日期">
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <div class="jinui_calendar jinui_calendar_inline" style="display:block;">
+        <div class="jinui_calendar_hd">
+            <div class="jinui_calendar_yearmonth">
+                <div class="jinui_calendar_year">
+                    <span class="jinui_calendar_title jinui_calendar_year_text">2016</span>
+                </div>
+                <div class="jinui_calendar_month">
+                    <span class="jinui_calendar_title jinui_calendar_month_text">06月</span>
+                </div>
+            </div>
+            <div class="jinui_calendar_title_day">
+                <a href="javascript:;" class="jinui_calendar_link jinui_calendar_day_prev">
+                    <i class="jinui_icon jinui_icon_chevron_left"></i>
+                </a>
+                <span class="jinui_calendar_title jinui_calendar_day_text">20日</span>
+                <a href="javascript:;" class="jinui_calendar_link jinui_calendar_day_next">
+                    <i class="jinui_icon jinui_icon_chevron_right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="jinui_calendar_bd">
+            <table class="jinui_calendar_table" width="100%" border="0">
+                <thead>
+                    <tr>
+                        <th>一</th>
+                        <th>二</th>
+                        <th>三</th>
+                        <th>四</th>
+                        <th>五</th>
+                        <th>六</th>
+                        <th>日</th>
+                    </tr>
+                </thead>
+            </table>
+            <div class="jinui_calendar_warp" style="width:320px;">
+                <div  class="jinui_calendar_inner" style="width:960px;transform: translateX(-320px);-webkit-transform:translateX(-320px);">
+                    <table class="jinui_calendar_table table table1"  style="width:320px;" border="0">
+                        <tbody>
+                            <tr>
+                                <td><span class="jinui_calendar_day othermonth">24</span></td>
+                                <td><span class="jinui_calendar_day othermonth">25</span></td>
+                                <td><span class="jinui_calendar_day othermonth">26</span></td>
+                                <td><span class="jinui_calendar_day othermonth">27</span></td>
+                                <td><span class="jinui_calendar_day othermonth">28</span></td>
+                                <td><span class="jinui_calendar_day othermonth">29</span></td>
+                                <td><span class="jinui_calendar_day othermonth">30</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="jinui_calendar_day disable">1</span></td>
+                                <td><span class="jinui_calendar_day">2</span></td>
+                                <td><span class="jinui_calendar_day today">3</span></td>
+                                <td><span class="jinui_calendar_day active">4</span><span class="jinui_calendar_badge"></span></td>
+                                <td><span class="jinui_calendar_day">5</span><span class="jinui_calendar_badge"></span></td>
+                                <td><span class="jinui_calendar_day">6</span></td>
+                                <td><span class="jinui_calendar_day">7</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="jinui_calendar_day">8</span></td>
+                                <td><span class="jinui_calendar_day">9</span></td>
+                                <td><span class="jinui_calendar_day">10</span></td>
+                                <td><span class="jinui_calendar_day">11</span></td>
+                                <td><span class="jinui_calendar_day">12</span></td>
+                                <td><span class="jinui_calendar_day">13</span></td>
+                                <td><span class="jinui_calendar_day">14</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="jinui_calendar_day">15</span></td>
+                                <td><span class="jinui_calendar_day">16</span></td>
+                                <td><span class="jinui_calendar_day">17</span></td>
+                                <td><span class="jinui_calendar_day">18</span></td>
+                                <td><span class="jinui_calendar_day">19</span></td>
+                                <td><span class="jinui_calendar_day">20</span></td>
+                                <td><span class="jinui_calendar_day">21</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="jinui_calendar_day">22</span></td>
+                                <td><span class="jinui_calendar_day">23</span></td>
+                                <td><span class="jinui_calendar_day">24</span></td>
+                                <td><span class="jinui_calendar_day">25</span></td>
+                                <td><span class="jinui_calendar_day">26</span></td>
+                                <td><span class="jinui_calendar_day">27</span></td>
+                                <td><span class="jinui_calendar_day">28</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="jinui_calendar_day">29</span></td>
+                                <td><span class="jinui_calendar_day">30</span></td>
+                                <td><span class="jinui_calendar_day">31</span></td>
+                                <td><span class="jinui_calendar_day othermonth">1</span></td>
+                                <td><span class="jinui_calendar_day othermonth">2</span></td>
+                                <td><span class="jinui_calendar_day othermonth">3</span></td>
+                                <td><span class="jinui_calendar_day othermonth">4</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="jinui_calendar_table table table2"  style="width:320px;" border="0">
+                        <tbody>
+                            <tr>
+                                <td><span class="jinui_calendar_day othermonth">24</span></td>
+                                <td><span class="jinui_calendar_day othermonth">25</span></td>
+                                <td><span class="jinui_calendar_day othermonth">26</span></td>
+                                <td><span class="jinui_calendar_day othermonth">27</span></td>
+                                <td><span class="jinui_calendar_day othermonth">28</span></td>
+                                <td><span class="jinui_calendar_day othermonth">29</span></td>
+                                <td><span class="jinui_calendar_day othermonth">30</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="jinui_calendar_day disable">1</span></td>
+                                <td><span class="jinui_calendar_day">2</span></td>
+                                <td><span class="jinui_calendar_day today">3</span></td>
+                                <td><span class="jinui_calendar_day active">4</span><span class="jinui_calendar_badge"></span></td>
+                                <td><span class="jinui_calendar_day">5</span><span class="jinui_calendar_badge"></span></td>
+                                <td><span class="jinui_calendar_day">6</span></td>
+                                <td><span class="jinui_calendar_day">7</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="jinui_calendar_day">8</span></td>
+                                <td><span class="jinui_calendar_day">9</span></td>
+                                <td><span class="jinui_calendar_day">10</span></td>
+                                <td><span class="jinui_calendar_day">11</span></td>
+                                <td><span class="jinui_calendar_day">12</span></td>
+                                <td><span class="jinui_calendar_day">13</span></td>
+                                <td><span class="jinui_calendar_day">14</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="jinui_calendar_day">15</span></td>
+                                <td><span class="jinui_calendar_day">16</span></td>
+                                <td><span class="jinui_calendar_day">17</span></td>
+                                <td><span class="jinui_calendar_day">18</span></td>
+                                <td><span class="jinui_calendar_day">19</span></td>
+                                <td><span class="jinui_calendar_day">20</span></td>
+                                <td><span class="jinui_calendar_day">21</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="jinui_calendar_day">22</span></td>
+                                <td><span class="jinui_calendar_day">23</span></td>
+                                <td><span class="jinui_calendar_day">24</span></td>
+                                <td><span class="jinui_calendar_day">25</span></td>
+                                <td><span class="jinui_calendar_day">26</span></td>
+                                <td><span class="jinui_calendar_day">27</span></td>
+                                <td><span class="jinui_calendar_day">28</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="jinui_calendar_day">29</span></td>
+                                <td><span class="jinui_calendar_day">30</span></td>
+                                <td><span class="jinui_calendar_day">31</span></td>
+                                <td><span class="jinui_calendar_day othermonth">1</span></td>
+                                <td><span class="jinui_calendar_day othermonth">2</span></td>
+                                <td><span class="jinui_calendar_day othermonth">3</span></td>
+                                <td><span class="jinui_calendar_day othermonth">4</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="jinui_calendar_table table table3"  style="width:320px;" border="0">
+                        <tbody>
+                            <tr>
+                                <td><span class="jinui_calendar_day othermonth">24</span></td>
+                                <td><span class="jinui_calendar_day othermonth">25</span></td>
+                                <td><span class="jinui_calendar_day othermonth">26</span></td>
+                                <td><span class="jinui_calendar_day othermonth">27</span></td>
+                                <td><span class="jinui_calendar_day othermonth">28</span></td>
+                                <td><span class="jinui_calendar_day othermonth">29</span></td>
+                                <td><span class="jinui_calendar_day othermonth">30</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="jinui_calendar_day disable">1</span></td>
+                                <td><span class="jinui_calendar_day">2</span></td>
+                                <td><span class="jinui_calendar_day today">3</span></td>
+                                <td><span class="jinui_calendar_day active">4</span><span class="jinui_calendar_badge"></span></td>
+                                <td><span class="jinui_calendar_day">5</span><span class="jinui_calendar_badge"></span></td>
+                                <td><span class="jinui_calendar_day">6</span></td>
+                                <td><span class="jinui_calendar_day">7</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="jinui_calendar_day">8</span></td>
+                                <td><span class="jinui_calendar_day">9</span></td>
+                                <td><span class="jinui_calendar_day">10</span></td>
+                                <td><span class="jinui_calendar_day">11</span></td>
+                                <td><span class="jinui_calendar_day">12</span></td>
+                                <td><span class="jinui_calendar_day">13</span></td>
+                                <td><span class="jinui_calendar_day">14</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="jinui_calendar_day">15</span></td>
+                                <td><span class="jinui_calendar_day">16</span></td>
+                                <td><span class="jinui_calendar_day">17</span></td>
+                                <td><span class="jinui_calendar_day">18</span></td>
+                                <td><span class="jinui_calendar_day">19</span></td>
+                                <td><span class="jinui_calendar_day">20</span></td>
+                                <td><span class="jinui_calendar_day">21</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="jinui_calendar_day">22</span></td>
+                                <td><span class="jinui_calendar_day">23</span></td>
+                                <td><span class="jinui_calendar_day">24</span></td>
+                                <td><span class="jinui_calendar_day">25</span></td>
+                                <td><span class="jinui_calendar_day">26</span></td>
+                                <td><span class="jinui_calendar_day">27</span></td>
+                                <td><span class="jinui_calendar_day">28</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="jinui_calendar_day">29</span></td>
+                                <td><span class="jinui_calendar_day">30</span></td>
+                                <td><span class="jinui_calendar_day">31</span></td>
+                                <td><span class="jinui_calendar_day othermonth">1</span></td>
+                                <td><span class="jinui_calendar_day othermonth">2</span></td>
+                                <td><span class="jinui_calendar_day othermonth">3</span></td>
+                                <td><span class="jinui_calendar_day othermonth">4</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jinui_calendar jinui_calendar_inline jinui_calendar_info" style="display:none;">
+        <div class="jinui_calendar_hd">
+            <div>
+                <div class="jinui_calendar_year">
+                    <span class="jinui_calendar_title jinui_calendar_year_text">2016</span>
+                </div>
+                <div class="jinui_calendar_month">
+                    <span class="jinui_calendar_title jinui_calendar_month_text">06月</span>
+                </div>
+            </div>
+            <div class="jinui_calendar_title_day">
+                <a href="javascript:;" class="jinui_calendar_link jinui_calendar_day_prev">
+                    <i class="jinui_icon jinui_icon_chevron_left"></i>
+                </a>
+                <span class="jinui_calendar_title jinui_calendar_day_text">20日</span>
+                <a href="javascript:;" class="jinui_calendar_link jinui_calendar_day_next">
+                    <i class="jinui_icon jinui_icon_chevron_right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="jinui_calendar_bd">
+            <table class="jinui_calendar_table" width="100%" border="0">
+                <thead>
+                    <tr>
+                        <th>周一</th>
+                        <th>周二</th>
+                        <th>周三</th>
+                        <th>周四</th>
+                        <th>周五</th>
+                        <th>周六</th>
+                        <th>周日</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="jinui_calendar_day othermonth">24</span></td>
+                        <td><span class="jinui_calendar_day othermonth">25</span></td>
+                        <td><span class="jinui_calendar_day othermonth">26</span></td>
+                        <td><span class="jinui_calendar_day othermonth">27</span></td>
+                        <td><span class="jinui_calendar_day othermonth">28</span></td>
+                        <td><span class="jinui_calendar_day othermonth">29</span></td>
+                        <td><span class="jinui_calendar_day othermonth">30</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="jinui_calendar_day disable">1</span></td>
+                        <td><span class="jinui_calendar_day">2</span></td>
+                        <td><span class="jinui_calendar_day today">3</span></td>
+                        <td><span class="jinui_calendar_day active">4</span><span class="jinui_calendar_badge"></span></td>
+                        <td><span class="jinui_calendar_day">5</span><span class="jinui_calendar_badge"></span></td>
+                        <td><span class="jinui_calendar_day">6</span></td>
+                        <td><span class="jinui_calendar_day">7</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="jinui_calendar_day">8</span></td>
+                        <td><span class="jinui_calendar_day">9</span></td>
+                        <td><span class="jinui_calendar_day">10</span></td>
+                        <td><span class="jinui_calendar_day">11</span></td>
+                        <td><span class="jinui_calendar_day">12</span></td>
+                        <td><span class="jinui_calendar_day">13</span></td>
+                        <td><span class="jinui_calendar_day">14</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="jinui_calendar_day">15</span></td>
+                        <td><span class="jinui_calendar_day">16</span></td>
+                        <td><span class="jinui_calendar_day">17</span></td>
+                        <td><span class="jinui_calendar_day">18</span></td>
+                        <td><span class="jinui_calendar_day">19</span></td>
+                        <td><span class="jinui_calendar_day">20</span></td>
+                        <td><span class="jinui_calendar_day">21</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="jinui_calendar_day">22</span></td>
+                        <td><span class="jinui_calendar_day">23</span></td>
+                        <td><span class="jinui_calendar_day">24</span></td>
+                        <td><span class="jinui_calendar_day">25</span></td>
+                        <td><span class="jinui_calendar_day">26</span></td>
+                        <td><span class="jinui_calendar_day">27</span></td>
+                        <td><span class="jinui_calendar_day">28</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="jinui_calendar_day">29</span></td>
+                        <td><span class="jinui_calendar_day">30</span></td>
+                        <td><span class="jinui_calendar_day">31</span></td>
+                        <td><span class="jinui_calendar_day othermonth">1</span></td>
+                        <td><span class="jinui_calendar_day othermonth">2</span></td>
+                        <td><span class="jinui_calendar_day othermonth">3</span></td>
+                        <td><span class="jinui_calendar_day othermonth">4</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="jinui_calendar jinui_calendar_inline jinui_calendar_danger" style="display:none;">
+        <div class="jinui_calendar_hd">
+            <div>
+                <div class="jinui_calendar_year">
+                    <span class="jinui_calendar_title jinui_calendar_year_text">2016</span>
+                </div>
+                <div class="jinui_calendar_month">
+                    <span class="jinui_calendar_title jinui_calendar_month_text">06月</span>
+                </div>
+            </div>
+            <div class="jinui_calendar_title_day">
+                <a href="javascript:;" class="jinui_calendar_link jinui_calendar_day_prev">
+                    <i class="jinui_icon jinui_icon_chevron_left"></i>
+                </a>
+                <span class="jinui_calendar_title jinui_calendar_day_text">20日</span>
+                <a href="javascript:;" class="jinui_calendar_link jinui_calendar_day_next">
+                    <i class="jinui_icon jinui_icon_chevron_right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="jinui_calendar_bd">
+            <table class="jinui_calendar_table" width="100%" border="0">
+                <thead>
+                    <tr>
+                        <th>一</th>
+                        <th>二</th>
+                        <th>三</th>
+                        <th>四</th>
+                        <th>五</th>
+                        <th>六</th>
+                        <th>日</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="jinui_calendar_day othermonth">24</span></td>
+                        <td><span class="jinui_calendar_day othermonth">25</span></td>
+                        <td><span class="jinui_calendar_day othermonth">26</span></td>
+                        <td><span class="jinui_calendar_day othermonth">27</span></td>
+                        <td><span class="jinui_calendar_day othermonth">28</span></td>
+                        <td><span class="jinui_calendar_day othermonth">29</span></td>
+                        <td><span class="jinui_calendar_day othermonth">30</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="jinui_calendar_day disable">1</span></td>
+                        <td><span class="jinui_calendar_day">2</span></td>
+                        <td><span class="jinui_calendar_day today">3</span></td>
+                        <td><span class="jinui_calendar_day active">4</span><span class="jinui_calendar_badge"></span></td>
+                        <td><span class="jinui_calendar_day">5</span><span class="jinui_calendar_badge"></span></td>
+                        <td><span class="jinui_calendar_day">6</span></td>
+                        <td><span class="jinui_calendar_day">7</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="jinui_calendar_day">8</span></td>
+                        <td><span class="jinui_calendar_day">9</span></td>
+                        <td><span class="jinui_calendar_day">10</span></td>
+                        <td><span class="jinui_calendar_day">11</span></td>
+                        <td><span class="jinui_calendar_day">12</span></td>
+                        <td><span class="jinui_calendar_day">13</span></td>
+                        <td><span class="jinui_calendar_day">14</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="jinui_calendar_day">15</span></td>
+                        <td><span class="jinui_calendar_day">16</span></td>
+                        <td><span class="jinui_calendar_day">17</span></td>
+                        <td><span class="jinui_calendar_day">18</span></td>
+                        <td><span class="jinui_calendar_day">19</span></td>
+                        <td><span class="jinui_calendar_day">20</span></td>
+                        <td><span class="jinui_calendar_day">21</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="jinui_calendar_day">22</span></td>
+                        <td><span class="jinui_calendar_day">23</span></td>
+                        <td><span class="jinui_calendar_day">24</span></td>
+                        <td><span class="jinui_calendar_day">25</span></td>
+                        <td><span class="jinui_calendar_day">26</span></td>
+                        <td><span class="jinui_calendar_day">27</span></td>
+                        <td><span class="jinui_calendar_day">28</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="jinui_calendar_day">29</span></td>
+                        <td><span class="jinui_calendar_day">30</span></td>
+                        <td><span class="jinui_calendar_day">31</span></td>
+                        <td><span class="jinui_calendar_day othermonth">1</span></td>
+                        <td><span class="jinui_calendar_day othermonth">2</span></td>
+                        <td><span class="jinui_calendar_day othermonth">3</span></td>
+                        <td><span class="jinui_calendar_day othermonth">4</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="jinui_list_title">
+        选择日历
+    </div>
+    <div class="jinui_calendar" style="display:none;">
+        <div class="jinui_mask"></div>
+        <div class="jinui_calendar_dialog">
+            <div class="jinui_calendar_hd">
+                <div class="jinui_calendar_year">
+                    <a href="javascript:;" class="jinui_calendar_link jinui_calendar_day_prev">
+                        <i class="jinui_icon jinui_icon_chevron_left"></i>
+                    </a>
+                    <span class="jinui_calendar_title jinui_calendar_year_text">2016</span>
+                    <a href="javascript:;" class="jinui_calendar_link jinui_calendar_day_next">
+                        <i class="jinui_icon jinui_icon_chevron_right"></i>
+                    </a>
+                </div>
+                <div class="jinui_calendar_month">
+                    <a href="javascript:;" class="jinui_calendar_link jinui_calendar_day_prev">
+                        <i class="jinui_icon jinui_icon_chevron_left"></i>
+                    </a>
+                    <span class="jinui_calendar_title jinui_calendar_month_text">06</span>
+                    <a href="javascript:;" class="jinui_calendar_link jinui_calendar_day_next">
+                        <i class="jinui_icon jinui_icon_chevron_right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="jinui_calendar_bd">
+                <table class="jinui_calendar_table" width="100%" border="0">
+                    <thead>
+                        <tr>
+                            <th>一</th>
+                            <th>二</th>
+                            <th>三</th>
+                            <th>四</th>
+                            <th>五</th>
+                            <th>六</th>
+                            <th>日</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="jinui_calendar_day othermonth">24</span></td>
+	                        <td><span class="jinui_calendar_day othermonth">25</span></td>
+	                        <td><span class="jinui_calendar_day othermonth">26</span></td>
+	                        <td><span class="jinui_calendar_day othermonth">27</span></td>
+	                        <td><span class="jinui_calendar_day othermonth">28</span></td>
+	                        <td><span class="jinui_calendar_day othermonth">29</span></td>
+	                        <td><span class="jinui_calendar_day othermonth">30</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="jinui_calendar_day disable">1</span></td>
+                            <td><span class="jinui_calendar_day jinui_calendar_day">2</span></td>
+                            <td><span class="jinui_calendar_day oday">3</span></td>
+                            <td><span class="jinui_calendar_day active">4</span><span class="jinui_calendar_badge"></span></td>
+                            <td><span class="jinui_calendar_day">5</span><span class="jinui_calendar_badge"></span></td>
+                            <td><span class="jinui_calendar_day">6</span><span class="jinui_calendar_badge"></span></td>
+                            <td><span class="jinui_calendar_day">7</span><span class="jinui_calendar_badge"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="jinui_calendar_day">8</span></td>
+                            <td><span class="jinui_calendar_day">9</span></td>
+                            <td><span class="jinui_calendar_day">10</span></td>
+                            <td><span class="jinui_calendar_day">11</span></td>
+                            <td><span class="jinui_calendar_day">12</span></td>
+                            <td><span class="jinui_calendar_day">13</span></td>
+                            <td><span class="jinui_calendar_day">14</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="jinui_calendar_day">15</span></td>
+                            <td><span class="jinui_calendar_day">16</span></td>
+                            <td><span class="jinui_calendar_day">17</span></td>
+                            <td><span class="jinui_calendar_day">18</span></td>
+                            <td><span class="jinui_calendar_day">19</span></td>
+                            <td><span class="jinui_calendar_day">20</span></td>
+                            <td><span class="jinui_calendar_day">21</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="jinui_calendar_day">22</span></td>
+                            <td><span class="jinui_calendar_day">23</span></td>
+                            <td><span class="jinui_calendar_day">24</span></td>
+                            <td><span class="jinui_calendar_day">25</span></td>
+                            <td><span class="jinui_calendar_day">26</span></td>
+                            <td><span class="jinui_calendar_day">27</span></td>
+                            <td><span class="jinui_calendar_day">28</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="jinui_calendar_day">29</span></td>
+                            <td><span class="jinui_calendar_day">30</span></td>
+                            <td><span class="jinui_calendar_day">31</span></td>
+                            <td><span class="jinui_calendar_day othermonth">1</span></td>
+                            <td><span class="jinui_calendar_day othermonth">2</span></td>
+                            <td><span class="jinui_calendar_day othermonth">3</span></td>
+                            <td><span class="jinui_calendar_day othermonth">4</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="jinui_calendar jinui_calendar_danger" style="display:none;">
+        <div class="jinui_mask"></div>
+        <div class="jinui_calendar_dialog">
+            <div class="jinui_calendar_hd">
+                <div class="jinui_calendar_year">
+                    <a href="javascript:;" class="jinui_calendar_link jinui_calendar_day_prev">
+                        <i class="jinui_icon jinui_icon_chevron_left"></i>
+                    </a>
+                    <span class="jinui_calendar_title jinui_calendar_year_text">2016</span>
+                    <a href="javascript:;" class="jinui_calendar_link jinui_calendar_day_next">
+                        <i class="jinui_icon jinui_icon_chevron_right"></i>
+                    </a>
+                </div>
+                <div class="jinui_calendar_month">
+                    <a href="javascript:;" class="jinui_calendar_link jinui_calendar_day_prev">
+                        <i class="jinui_icon jinui_icon_chevron_left"></i>
+                    </a>
+                    <span class="jinui_calendar_title jinui_calendar_month_text">06</span>
+                    <a href="javascript:;" class="jinui_calendar_link jinui_calendar_day_next">
+                        <i class="jinui_icon jinui_icon_chevron_right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="jinui_calendar_bd">
+                <table class="jinui_calendar_table" width="100%" border="0">
+                    <thead>
+                        <tr>
+                            <th>一</th>
+                            <th>二</th>
+                            <th>三</th>
+                            <th>四</th>
+                            <th>五</th>
+                            <th>六</th>
+                            <th>日</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="jinui_calendar_day othermonth">24</span></td>
+	                        <td><span class="jinui_calendar_day othermonth">25</span></td>
+	                        <td><span class="jinui_calendar_day othermonth">26</span></td>
+	                        <td><span class="jinui_calendar_day othermonth">27</span></td>
+	                        <td><span class="jinui_calendar_day othermonth">28</span></td>
+	                        <td><span class="jinui_calendar_day othermonth">29</span></td>
+	                        <td><span class="jinui_calendar_day othermonth">30</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="jinui_calendar_day disable">1</span></td>
+                            <td><span class="jinui_calendar_day jinui_calendar_day">2</span></td>
+                            <td><span class="jinui_calendar_day oday">3</span></td>
+                            <td><span class="jinui_calendar_day active">4</span><span class="jinui_calendar_badge"></span></td>
+                            <td><span class="jinui_calendar_day">5</span><span class="jinui_calendar_badge"></span></td>
+                            <td><span class="jinui_calendar_day">6</span><span class="jinui_calendar_badge"></span></td>
+                            <td><span class="jinui_calendar_day">7</span><span class="jinui_calendar_badge"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="jinui_calendar_day">8</span></td>
+                            <td><span class="jinui_calendar_day">9</span></td>
+                            <td><span class="jinui_calendar_day">10</span></td>
+                            <td><span class="jinui_calendar_day">11</span></td>
+                            <td><span class="jinui_calendar_day">12</span></td>
+                            <td><span class="jinui_calendar_day">13</span></td>
+                            <td><span class="jinui_calendar_day">14</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="jinui_calendar_day">15</span></td>
+                            <td><span class="jinui_calendar_day">16</span></td>
+                            <td><span class="jinui_calendar_day">17</span></td>
+                            <td><span class="jinui_calendar_day">18</span></td>
+                            <td><span class="jinui_calendar_day">19</span></td>
+                            <td><span class="jinui_calendar_day">20</span></td>
+                            <td><span class="jinui_calendar_day">21</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="jinui_calendar_day">22</span></td>
+                            <td><span class="jinui_calendar_day">23</span></td>
+                            <td><span class="jinui_calendar_day">24</span></td>
+                            <td><span class="jinui_calendar_day">25</span></td>
+                            <td><span class="jinui_calendar_day">26</span></td>
+                            <td><span class="jinui_calendar_day">27</span></td>
+                            <td><span class="jinui_calendar_day">28</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="jinui_calendar_day">29</span></td>
+                            <td><span class="jinui_calendar_day">30</span></td>
+                            <td><span class="jinui_calendar_day">31</span></td>
+                            <td><span class="jinui_calendar_day othermonth">1</span></td>
+                            <td><span class="jinui_calendar_day othermonth">2</span></td>
+                            <td><span class="jinui_calendar_day othermonth">3</span></td>
+                            <td><span class="jinui_calendar_day othermonth">4</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> -->
+    
+    <script src="../../src/libs/zepto.min.js"></script>
+    <script src="../../dist/jinui.js"></script>
+    <script>
+    $(function(){
+        
+
+        var calendar = $('.calendar').calendar({
+            monthNames:['01月','02月','03月','04月','05月','06月','07月','08月','09月','10月','11月','12月'],
+            dayNames: ['一', '二', '三', '四', '五', '六','日'],
+            inline:true,
+            firstDay:1,
+            dateFormat: 'yyyy-mm-dd',
+            theme:'info',//
+            markDays:[1,2,3],
+            onClickDay:function(a){
+                //console.log(a);
+            },
+            onMonthChange:function(d){
+                //a.calendar('setMarkDays',31);
+            },
+            onInit:function(date){
+                //console.log(date);
+            }
+
+        });
+
+
+
+        $('.select_calendar').calendar({
+            monthNames:['01月','02月','03月','04月','05月','06月','07月','08月','09月','10月','11月','12月'],
+            dayNames: ['一', '二', '三', '四', '五', '六','日'],
+            firstDay:1,
+            theme:'info',//
+            dateFormat: 'yyyy-mm-dd',
+            theme:'warning',//
+            multiple:true,
+            onInit:function(date){
+                //console.log(date);
+            }
+
+        });
+
+
+    })
+
+    </script>
+</body>
+
+</html>

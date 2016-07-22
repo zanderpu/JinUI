@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+	<title>Swiper</title>
+	<link rel="stylesheet" href="../../dist/jinui.css">
+	<link rel="stylesheet" href="../demo.css">
+</head>
+<body ontouchstart>
+	
+
+    <div id="swiperverticalimg" class="jinui_swiper">
+        <div class="jinui_swiper_container">
+            <div class="jinui_swiper_slide">
+                1
+            </div>
+            <div class="jinui_swiper_slide">
+                2
+            </div>
+            <div class="jinui_swiper_slide">
+                3
+            </div>
+            <div class="jinui_swiper_slide">
+                4
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../../src/libs/zepto.min.js"></script>
+    <script src="../../dist/jinui.js"></script>
+    <script>
+    $(function(){
+
+        $('.jinui_swiper_slide').height($(window).height());
+
+        $('#swiperverticalimg').swiper({
+            loop:true,
+            auto:false,
+            autotime:3000,
+            orientation:'vertical',
+            pagination:true,
+            pageposition:'rightcenter',
+            onChange:function(i){
+                console.log('当前'+i);
+            },
+            onEnter:function(i){
+                console.log('进入'+i);
+            },
+            onLeave:function(i){
+                console.log('离开'+i);
+            }
+        });
+
+
+
+        
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Toast</title>
+    <link rel="stylesheet" href="../../dist/jinui.min.css">
+    <link rel="stylesheet" href="../demo.css">
+</head>
+
+<body ontouchstart>
+    <h1 class="page_title">Toast</h1>
+    <div class="jinui_btn_area" style="margin-top:50px;">
+        <a href="javascript:;" class="jinui_btn jinui_btn_default" id="toast">已完成</a>
+        <a href="javascript:;" class="jinui_btn jinui_btn_default" id="toast_warn">错误</a>
+        <a href="javascript:;" class="jinui_btn jinui_btn_default" id="toast_loading">loading</a>
+        <a href="javascript:;" class="jinui_btn jinui_btn_default" id="toast_tip">tip</a>
+    </div>
+    <div class="jinui_list_title">
+        toptip
+    </div>
+    <div class="jinui_btn_area">
+        <a href="javascript:;" class="jinui_btn jinui_btn_default" id="toast_tip_info">toptip_info</a>
+        <a href="javascript:;" class="jinui_btn jinui_btn_default" id="toast_tip_success">toptip_success</a>
+        <a href="javascript:;" class="jinui_btn jinui_btn_default" id="toast_tip_danger">toptip_danger</a>
+        <a href="javascript:;" class="jinui_btn jinui_btn_default" id="toast_tip_primary">toptip_primary</a>
+        <a href="javascript:;" class="jinui_btn jinui_btn_default" id="toast_tip_warning">toptip_warning</a>
+        <a href="javascript:;" class="jinui_btn jinui_btn_default" id="toast_tip_customize">toptip_自定义</a>
+    </div>
+    <div class="jinui_toast" id="jinui_toast_success" style="display:none;">
+        <div class="jinui_mask_transparent"></div>
+        <div class="jinui_toast_inner jinui_toast_success">
+            <i class="jinui_icon jinui_icon_success_empty"></i>
+            <p class="jinui_toast_content">已完成</p>
+        </div>
+    </div>
+    <div class="jinui_toast" id="jinui_toast_warn" style="display:none;">
+        <div class="jinui_mask_transparent"></div>
+        <div class="jinui_toast_inner jinui_toast_warn">
+            <i class="jinui_icon jinui_icon_warn"></i>
+            <p class="jinui_toast_content">保存失败</p>
+        </div>
+    </div>
+    <div class="jinui_toast" id="jinui_toast_loading" style="display:none;">
+        <div class="jinui_mask_transparent"></div>
+        <div class="jinui_toast_inner jinui_toast_loading">
+            <div class="jinui_loading">
+                <div class="jinui_loading_leaf jinui_loading_leaf_0"></div>
+                <div class="jinui_loading_leaf jinui_loading_leaf_1"></div>
+                <div class="jinui_loading_leaf jinui_loading_leaf_2"></div>
+                <div class="jinui_loading_leaf jinui_loading_leaf_3"></div>
+                <div class="jinui_loading_leaf jinui_loading_leaf_4"></div>
+                <div class="jinui_loading_leaf jinui_loading_leaf_5"></div>
+                <div class="jinui_loading_leaf jinui_loading_leaf_6"></div>
+                <div class="jinui_loading_leaf jinui_loading_leaf_7"></div>
+                <div class="jinui_loading_leaf jinui_loading_leaf_8"></div>
+                <div class="jinui_loading_leaf jinui_loading_leaf_9"></div>
+                <div class="jinui_loading_leaf jinui_loading_leaf_10"></div>
+                <div class="jinui_loading_leaf jinui_loading_leaf_11"></div>
+            </div>
+            <p class="jinui_toast_content">加载中</p>
+        </div>
+    </div>
+    <div class="jinui_toast" id="jinui_toast_tip" style="display:none;">
+        <div class="jinui_mask_transparent"></div>
+        <div class="jinui_toast_inner jinui_toast_tip">
+            <p class="jinui_toast_content">加载失败</p>
+        </div>
+    </div>
+    <div class="jinui_toptip bg_info" style="display:none;">
+        操作成功
+    </div>
+    <div class="jinui_toptip bg_success" style="display:none;">
+        操作成功
+    </div>
+    <div class="jinui_toptip bg_danger" style="display:none;">
+        操作失败
+    </div>
+    <div class="jinui_toptip bg_primary" style="display:none;">
+        操作确认
+    </div>
+    <div class="jinui_toptip bg_warning" style="display:block;">
+        操作警告
+    </div>
+    <script src="../../src/libs/zepto.min.js"></script>
+    <script src="../../src/libs/fastclick.js"></script>
+    <script src="../../dist/jinui.js"></script>
+    <script>
+    $(function() {
+        FastClick.attach(document.body);
+
+        $('#toast').on('click', function(event) {
+            var index = jinui.toast({
+                content: '保存成功',
+                type: 0
+            });
+        });
+
+        $('#toast_warn').on('click', function(event) {
+
+            var index = jinui.toast({
+                content: '提交失败',
+                type: 1
+            });
+        });
+
+
+        $('#toast_loading').on('click', function(event) {
+            jinui.loading();
+
+            setTimeout(function() {
+                jinui.hideLoading();
+            }, 3000)
+        });
+
+        $('#toast_tip').on('click', function(event) {
+            var index = jinui.toast({
+                content: '加载失败',
+                type: 2,
+            });
+        });
+
+        $('#toast_tip_info').on('click', function(event) {
+            var index = jinui.toast({
+                content: '加载失败',
+                type: 2,
+                toptip: 'info', //info,success,danger,primary,warning
+            });
+        });
+        $('#toast_tip_success').on('click', function(event) {
+            var index = jinui.toast({
+                content: '加载失败',
+                type: 2,
+                toptip: 'success', //info,success,danger,primary,warning
+            });
+        });
+        $('#toast_tip_danger').on('click', function(event) {
+            var index = jinui.toast({
+                content: '加载失败',
+                type: 2,
+                toptip: 'danger', //info,success,danger,primary,warning
+            });
+        });
+        $('#toast_tip_primary').on('click', function(event) {
+            var index = jinui.toast({
+                content: '加载失败',
+                type: 2,
+                toptip: 'primary', //info,success,danger,primary,warning
+            });
+        });
+        $('#toast_tip_warning').on('click', function(event) {
+            var index = jinui.toast({
+                content: '加载失败',
+                type: 2,
+                toptip: 'warning', //info,success,danger,primary,warning
+            });
+        });
+
+        $('#toast_tip_customize').on('click', function(event) {
+            var index = jinui.toast({
+                content: '加载失败',
+                type: 2,
+                toptip: 'customize', //info,success,danger,primary,warning
+            });
+        });
+    })
+    </script>
+</body>
+
+</html>

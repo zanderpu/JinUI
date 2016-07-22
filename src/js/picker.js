@@ -25,14 +25,14 @@ picker
 
             var _colshtml = '';
             for(var i in p.params.cols){
-                _colshtml += '<div class="jinui_picker_col"><div class="jinui_picker_items">'
+                _colshtml += '<div class="jinui_picker_col"><div class="jinui_picker_items">';
                 for(var j in p.params.cols[i]){
                     var _val = p.params.cols[i][j].value ? p.params.cols[i][j].value : p.params.cols[i][j].text;
                     var _colhtml = '<div class="jinui_picker_item" data-picker-value="'+ _val +'">'+ p.params.cols[i][j].text +'</div>';
                     _colshtml += _colhtml;
                 }
-                _colshtml += '</div></div>'
-            };
+                _colshtml += '</div></div>';
+            }
             
             p.pickerColsHTML.html(_colshtml);
             setValue();
@@ -57,7 +57,7 @@ picker
                 startY = touch.pageY;
                 moveY = 0;
                 translatey = $this.attr('translatey') ? $this.attr('translatey')*1 : 102;
-            })
+            });
             $('.jinui_picker_items').bind('touchmove', function(event) {
                 var $this = $(this);
                 var touch = event.targetTouches[0];
@@ -84,7 +84,8 @@ picker
                 //console.log($($this.find('.jinui_picker_item')[nowSelected]).html());
 
                 changeVal();
-            })
+            });
+
             $('.jinui_picker_items').bind('touchend', function(event) {
                 var $this = $(this);
                 translatey = translatey + Math.round(moveY/34)*34;
@@ -99,7 +100,7 @@ picker
                     'transition-duration':''
                 });
                 $this.attr('translatey',translatey);
-            })
+            });
 
             $(document.body).bind('click', function(event) {
                 p.close();
@@ -134,7 +135,7 @@ picker
                             return false;
                         }
                     }else{
-                        j==0 ? _this.addClass('jinui_picker_selected') : '';
+                        j===0 ? _this.addClass('jinui_picker_selected') : '';
                     }
                 });
                 
@@ -171,7 +172,7 @@ picker
                 vals:vals,
                 result:result,
                 cols:cols
-            }
+            };
         }
 
         var oldValue='';
@@ -190,36 +191,35 @@ picker
             if(!p.pickerHTML){
                 $('.jinui_picker').length>0 ? $('.jinui_picker').data('picker').close() : '';
                 initHtml();
-            };
-            
-        }
+            }
+        };
 
         p.close = function(){
-            p.params.onClose.call(p,getValue().result)
+            p.params.onClose.call(p,getValue().result);
             $(p.pickerHTML).removeClass('jinui_animation_open').addClass('jinui_animation_close');
             setTimeout(function(){
                 $(p.pickerHTML).remove();
                 p.pickerHTML = null;
-            },300)
-        }
+            },300);
+        };
 
         //获取值
         p.getValue = function(){
             return getValue().cols;
-        }
+        };
 
         //设置值
         p.setValue = function(value){
             if(value){
                 $(p.params.container).val(value);
             }
-        }
+        };
 
         p.updateCols = function(){
             console.log(p.params.cols);
 
             for(var i in p.params.cols){
-                var _colshtml = ''
+                var _colshtml = '';
                 var nowObj = $(p.pickerHTML).find('.jinui_picker_items')[i];
                 for(var j in p.params.cols[i]){
                     var _val = p.params.cols[i][j].value ? p.params.cols[i][j].value : p.params.cols[i][j].text;
@@ -227,18 +227,14 @@ picker
                     _colshtml += _colhtml;
                 }
                 $(nowObj).html(_colshtml);
-            };
+            }
             setValue();
 
-        }
+        };
 
-        //设置列数据
-        p.setCol = function(){
-
-        }
 
         
-    }
+    };
 
     $.fn.picker = function(params, args) {
         params = params || {};

@@ -1,0 +1,39 @@
+//
+
+
+
+.jinui_actionsheet_content{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background:#EFEFF4;
+	z-index: $zindex+1;
+}
+.jinui_actionsheet_cell{
+	padding:10px 0;
+	text-align: center;
+	font-size: 18px;
+	background:#fff;
+	position: relative;
+	&:after{
+		@include setBottomLine();
+	}
+	&:last-child{
+		&:after{
+			display: none;
+		}
+	}
+	>a{
+		display: block;
+		color:#000;
+	}
+}
+.jinui_actionsheet_title{
+	color:$color-text-gray;
+	font-size: 14px;
+	padding:16px 0;
+}
+.jinui_actionsheet_cancel{
+	margin-top: 6px;
+}

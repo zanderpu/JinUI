@@ -1,0 +1,108 @@
+//
+.jinui_swiper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.jinui_swiper_container {
+    //transform: translate3d(-540px, 0px, 0px);
+    transition-duration: 300ms;
+    &:after {
+        display: block;
+        content: '';
+        clear: both;
+        overflow: hidden;
+    }
+}
+
+.jinui_swiper_slide {
+	img{
+		vertical-align: top;
+	}
+}
+
+.jinui_swiper_pagination {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    &:after {
+        display: block;
+        content: '';
+        clear: both;
+        overflow: hidden;
+    }
+}
+
+.jinui_swiper_page {
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    float: left;
+    margin-left: 5px;
+    background: rgba(0, 0, 0, .5);
+    &.active {
+        background: $color-primary;
+    }
+}
+
+//设置位置
+@mixin pagepostion($top,$right,$bottom,$left,$width,$float,$margin){
+	top: $top;
+	left: $left;
+	bottom: $bottom;
+	right:$right;
+	width: $width;
+	.jinui_swiper_page{
+		float: $float;
+		margin:$margin;
+	}
+}
+
+.jinui_swiper_lefttop {
+	@include pagepostion(10px,inherit,inherit,10px,7px,none,0 0 5px 0);
+}
+
+.jinui_swiper_leftcenter {
+	@include pagepostion(50%,inherit,inherit,10px,7px,none,0 0 5px 0);
+}
+
+.jinui_swiper_leftbottom {
+	@include pagepostion(inherit,inherit,10px,10px,7px,none,0 0 5px 0);
+}
+
+.jinui_swiper_righttop {
+	@include pagepostion(10px,10px,inherit,inherit,7px,none,0 0 5px 0);
+}
+
+.jinui_swiper_rightcenter {
+	@include pagepostion(50%,10px,inherit,inherit,7px,none,0 0 5px 0);
+}
+
+.jinui_swiper_rightbottom {
+	@include pagepostion(inherit,10px,10px,inherit,7px,none,0 0 5px 0);
+}
+
+.jinui_swiper_topleft {
+	@include pagepostion(10px,inherit,inherit,10px,auto,left,0 5px 0 0);
+}
+
+.jinui_swiper_topcenter {
+	@include pagepostion(10px,inherit,inherit,50%,auto,left,0 5px 0 0);
+}
+
+.jinui_swiper_topright {
+	@include pagepostion(10px,10px,inherit,inherit,auto,left,0 5px 0 0);
+}
+
+.jinui_swiper_bottomleft {
+	@include pagepostion(inherit,inherit,10px,10px,auto,left,0 5px 0 0);
+}
+
+.jinui_swiper_bottomcenter {
+	@include pagepostion(inherit,inherit,10px,50%,auto,left,0 5px 0 0);
+}
+
+.jinui_swiper_bottomright {
+	@include pagepostion(inherit,10px,10px,inherit,auto,left,0 5px 0 0);
+}

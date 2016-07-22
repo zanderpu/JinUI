@@ -8,6 +8,8 @@ var header = require('gulp-header');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 
+var plumber = require('gulp-plumber');//防止出错进程挂掉
+
 var pkg = require("./package.json");
 
 var banner = 
@@ -21,6 +23,7 @@ var banner =
 gulp.task('jshint', function() {
     return gulp.src('src/js/*.js')
         .pipe(jshint())
+        .pipe(plumber())
         .pipe(jshint.reporter('default'));
 });
 
@@ -28,6 +31,7 @@ gulp.task('jshint', function() {
 // 合并文件之后压缩代码
 gulp.task('minify', function() {
     return gulp.src(['src/libs/fastclick.js','src/js/*.js'])
+        .pipe(plumber())
         .pipe(concat('jinui.js'))
         .pipe(header(banner))
         .pipe(gulp.dest('dist'))
@@ -40,6 +44,7 @@ gulp.task('minify', function() {
 //编译scss文件
 gulp.task("scss", function() {
     return gulp.src('src/scss/jinui.scss')
+        .pipe(plumber())
         .pipe(sass())
         .pipe(postcss([autoprefixer]))
         .pipe(header(banner))

@@ -399,7 +399,7 @@ calendar
             $(c.container).find('.jinui_calendar_dialog').removeClass('jinui_animation_open').addClass('jinui_animation_close');
             setTimeout(function(){
                 $(c.container).hide();
-            },200)
+            },200);
         };
 
         c.show = function(){
@@ -415,7 +415,7 @@ calendar
 
         c.setDay = function(date){//选中天
 
-        }
+        };
 
         if(!c.params.inline){//内联
             if(c.params.hasDefault){
